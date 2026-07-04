@@ -1,0 +1,136 @@
+name: Build Framework-Dependent ShareX
+
+on:
+  push:
+    branches: [ master ]
+    paths-ignore:
+      - '.github/workflows/**'
+      - 'README.md'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+    - name: 检出代码
+      uses: actions/checkout@v4
+
+    - name: 自动修改更新请求地址
+      run: |
+        Get-ChildItem -Path . -Recurse -Filter *.cs | ForEach-Object {
+            $path = $_.FullName
+            $text = Get-Content $path -Raw
+            if ($text -match 'ShareX/ShareX') {
+                $text = $text -replace 'ShareX/ShareX', '${{ github.repository }}'
+                [System.IO.File]::WriteAllText($path, $text)
+            }
+        }
+
+    - name: 安装 .NET 9.0 编译环境
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: '9.0.x'
+
+    - name: 恢复 NuGet 依赖包
+      run: |
+        dotnet restore --runtime "win-x64" ShareX.sln
+        dotnet restore --runtime "win-x64" ShareX.Setup\ShareX.Setup.csproj
+
+    - name: 编译 ShareX 核心 (剔除 .NET 9)
+      run: dotnet build --configuration Release -p:Platform="x64" --self-contained false /m:1 ShareX.sln
+
+    - name: 编译官方打包工具
+      run: dotnet build --configuration Release -p:Platform="x64" --self-contained true ShareX.Setup\ShareX.Setup.csproj
+
+    - name: 运行官方工具生成纯净版
+      run: '& "ShareX.Setup\bin\Release\win-x64\ShareX.Setup.exe" -silent -job Release -platform x64'
+
+    - name: 从压缩包中剔除 FFmpeg
+      run: |
+        $zipFile = Get-ChildItem -Path Output\*portable*.zip | Select-Object -First 1
+        $tempDir = "Output\temp_lite"
+        Expand-Archive -Path $zipFile.FullName -DestinationPath $tempDir
+        
+        $ffmpeg = Get-ChildItem -Path $tempDir -Recurse -Filter "ffmpeg.exe"
+        if ($ffmpeg) { Remove-Item -Path $ffmpeg.FullName -Force }
+        
+        Remove-Item -Path $zipFile.FullName -Force
+        Compress-Archive -Path "$tempDir\*" -DestinationPath $zipFile.FullName
+        Remove-Item -Path $tempDir -Recurse -Force
+
+    - name: 动态重命名添加 lite 后缀及提取版本号
+      run: |
+        $zipFile = Get-ChildItem -Path Output\*portable*.zip | Select-Object -First 1
+        $newName = $zipFile.Name -replace '\.zip$', '-lite.zip'
+        Rename-Item -Path $zipFile.FullName -NewName $newName
+        
+        $version = $zipFile.Name -replace '^ShareX-(.*?)-portable.*$', '$1'
+        
+        echo "LITE_FILENAME=$newName" >> $env:GITHUB_ENV
+        echo "APP_VERSION=$version" >> $env:GITHUB_ENV
+
+    - name: 生成双语发布日志与发行版本号
+      env:
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        LITE_NOTES_STATIC: |
+          ### 精简版说明
+          
+          这是自动编译的 ShareX 精简版，移除了内置的 .NET 9.0 框架和 FFmpeg 组件以大幅缩减软件体积。
+          
+          ⚠️ **运行前置要求：**
+          1. **.NET 9 框架**：请确保系统已全局安装 [.NET 9.0 Desktop Runtime](https://dotnet.microsoft.com/download/dotnet/9.0) (x64)。
+          2. **FFmpeg (可选)**：本版本已剔除 FFmpeg。该组件主要用于**屏幕录制 (MP4视频)**和**GIF 动图生成**。如不使用录屏功能可忽略此项。
+          
+          ⚙️ **如何自定义或恢复 FFmpeg：**
+          依次打开 `任务设置` -> `屏幕录制` -> `屏幕录制选项` -> 勾选 `使用自定义 FFmpeg 路径：` -> 在输入框中手动指定你电脑上已有的 `ffmpeg.exe` 路径。
+          
+          ---
+          
+          ### Lite Edition Overview
+          
+          This is an automatically compiled ShareX Lite edition. The bundled .NET 9.0 desktop runtime and FFmpeg components have been removed to significantly reduce the file size.
+          
+          ⚠️ **System Requirements:**
+          1. **.NET 9 Runtime**: Please ensure that [.NET 9.0 Desktop Runtime](https://dotnet.microsoft.com/download/dotnet/9.0) (x64) is installed globally on your system.
+          2. **FFmpeg (Optional)**: FFmpeg has been removed. This component is mainly used for **screen recording (MP4)** and **GIF generation**. If you do not use recording features, you can safely ignore this.
+          
+          ⚙️ **How to restore FFmpeg:**
+          Go to `Task settings` -> `Screen recorder` -> `Screen recording options` -> Check `Use custom FFmpeg path:` -> In the input field, manually specify the path to the `ffmpeg.exe` file that already exists on your computer.
+      run: |
+        $ReleaseBody = gh release view --repo ShareX/ShareX --json body --jq '.body'
+        if ([string]::IsNullOrWhiteSpace($ReleaseBody)) {
+            $ReleaseBody = "**Changelog:** https://getsharex.com/changelog"
+        }
+        
+        $version = $env:APP_VERSION
+        $releaseList = gh release list --repo ${{ github.repository }} --limit 100
+        if ($releaseList) {
+            $existingCount = @($releaseList | Select-String "v$version-lite").Count
+        } else {
+            $existingCount = 0
+        }
+        $seq = $existingCount + 1
+        echo "RELEASE_TAG=v$version-lite-$seq" >> $env:GITHUB_ENV
+        
+        $FilePath = "Output\$env:LITE_FILENAME"
+        $FileHash = (Get-FileHash -Path $FilePath -Algorithm SHA256).Hash
+        
+        $FileTable = "| File | SHA256 |`n| --- | --- |`n| $env:LITE_FILENAME | ``$FileHash`` |`n"
+        
+        $BlockquotedOfficial = ($ReleaseBody -split "`r?`n" | ForEach-Object { "> $_" }) -join "`n"
+        $FinalBody = $env:LITE_NOTES_STATIC + "`n`n---`n`n### 📦 文件校验 / File Verification`n`n" + $FileTable + "`n### 📝 官方更新日志 / Official Changelog`n`n" + $BlockquotedOfficial
+        
+        [System.IO.File]::WriteAllText("release_notes.md", $FinalBody, [System.Text.Encoding]::UTF8)
+
+    - name: 自动发布到 Releases
+      if: vars.ENABLE_RELEASE == 'true'
+      uses: softprops/action-gh-release@v1
+      with:
+        files: Output/*-lite.zip
+        tag_name: ${{ env.RELEASE_TAG }}
+        name: ${{ env.RELEASE_TAG }}
+        body_path: release_notes.md
