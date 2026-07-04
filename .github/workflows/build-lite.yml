@@ -4,7 +4,7 @@ on:
   push:
     branches: [ master ]
     paths-ignore:
-  #   - '.github/workflows/**'
+      - '.github/workflows/**'
       - 'README.md'
   workflow_dispatch:
 
@@ -127,7 +127,7 @@ jobs:
         [System.IO.File]::WriteAllText("release_notes.md", $FinalBody, [System.Text.Encoding]::UTF8)
 
     - name: 自动发布到 Releases
-      if: vars.ENABLE_RELEASE == 'true'
+    # if: vars.ENABLE_RELEASE == 'true'
       uses: softprops/action-gh-release@v1
       with:
         files: Output/*-lite.zip
