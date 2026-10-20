@@ -3,7 +3,8 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:vm="clr-namespace:ShareX.ImageEditor.Presentation.ViewModels"
-             xmlns:theming="clr-namespace:ShareX.ImageEditor.Presentation.Theming"
+             xmlns:theming="clr-namespace:ShareX.AvaloniaUI.Theming;assembly=ShareX.Avalonia"
+             xmlns:res="using:ShareX.ImageEditor.Localization"
              mc:Ignorable="d" d:DesignWidth="750" d:DesignHeight="500"
              x:Class="ShareX.ImageEditor.Presentation.Views.StartScreenDialogView"
              x:DataType="vm:StartScreenDialogViewModel">
@@ -29,7 +30,7 @@
                                Foreground="{DynamicResource ShareX.Brush.Text}"/>
 
                     <Button Grid.Column="1"
-                            Classes="editor-button toolbar-button"
+                            Classes="toolbar-button"
                             Command="{Binding CloseCommand}"
                             Width="32"
                             MinWidth="32"
@@ -68,7 +69,7 @@
                         </Grid>
                     </Border>
 
-                    <Button Classes="editor-button" Command="{Binding NewImageCommand}"
+                    <Button Command="{Binding NewImageCommand}"
                             HorizontalAlignment="Stretch" HorizontalContentAlignment="Left"
                             Padding="12,10" Height="42">
                         <StackPanel Orientation="Horizontal" Spacing="12">
@@ -76,11 +77,11 @@
                                        FontFamily="{DynamicResource ShareX.FontFamily.Icon}"
                                        FontSize="18" FontWeight="Normal"
                                        VerticalAlignment="Center"/>
-                            <TextBlock Text="Create new image..." FontWeight="Normal" VerticalAlignment="Center"/>
+                            <TextBlock Text="{x:Static res:Strings.StartScreenDialogView_CreateNewImage}" FontWeight="Normal" VerticalAlignment="Center"/>
                         </StackPanel>
                     </Button>
 
-                    <Button Classes="editor-button" Command="{Binding OpenFileCommand}"
+                    <Button Command="{Binding OpenFileCommand}"
                             HorizontalAlignment="Stretch" HorizontalContentAlignment="Left"
                             Padding="12,10" Height="42">
                         <StackPanel Orientation="Horizontal" Spacing="12">
@@ -88,11 +89,11 @@
                                        FontFamily="{DynamicResource ShareX.FontFamily.Icon}"
                                        FontSize="18" FontWeight="Normal"
                                        VerticalAlignment="Center"/>
-                            <TextBlock Text="Open image file..." FontWeight="Normal" VerticalAlignment="Center"/>
+                            <TextBlock Text="{x:Static res:Strings.StartScreenDialogView_OpenImageFile}" FontWeight="Normal" VerticalAlignment="Center"/>
                         </StackPanel>
                     </Button>
 
-                    <Button Classes="editor-button" Command="{Binding LoadFromClipboardCommand}"
+                    <Button Command="{Binding LoadFromClipboardCommand}"
                             HorizontalAlignment="Stretch" HorizontalContentAlignment="Left"
                             Padding="12,10" Height="42">
                         <StackPanel Orientation="Horizontal" Spacing="12">
@@ -100,11 +101,11 @@
                                        FontFamily="{DynamicResource ShareX.FontFamily.Icon}"
                                        FontSize="18" FontWeight="Normal"
                                        VerticalAlignment="Center"/>
-                            <TextBlock Text="Load image from clipboard" FontWeight="Normal" VerticalAlignment="Center"/>
+                            <TextBlock Text="{x:Static res:Strings.StartScreenDialogView_LoadImageFromClipboard}" FontWeight="Normal" VerticalAlignment="Center"/>
                         </StackPanel>
                     </Button>
 
-                    <Button Classes="editor-button" Command="{Binding LoadFromUrlCommand}"
+                    <Button Command="{Binding LoadFromUrlCommand}"
                             HorizontalAlignment="Stretch" HorizontalContentAlignment="Left"
                             Padding="12,10" Height="42">
                         <StackPanel Orientation="Horizontal" Spacing="12">
@@ -112,7 +113,7 @@
                                        FontFamily="{DynamicResource ShareX.FontFamily.Icon}"
                                        FontSize="18" FontWeight="Normal"
                                        VerticalAlignment="Center"/>
-                            <TextBlock Text="Load image from URL..." FontWeight="Normal" VerticalAlignment="Center"/>
+                            <TextBlock Text="{x:Static res:Strings.StartScreenDialogView_LoadImageFromURL}" FontWeight="Normal" VerticalAlignment="Center"/>
                         </StackPanel>
                     </Button>
 
@@ -128,19 +129,19 @@
                                          IsIndeterminate="True"
                                          Height="4"/>
                             <StackPanel Orientation="Horizontal" Spacing="6" HorizontalAlignment="Right">
-                                <Button Classes="editor-button"
-                                        Content="Load"
+                                <Button
+                                        Content="{x:Static res:Strings.StartScreenDialogView_Load}"
                                         Command="{Binding SubmitUrlCommand}"
                                         Padding="18,0"/>
-                                <Button Classes="editor-button"
-                                        Content="Cancel"
+                                <Button
+                                        Content="{x:Static res:Strings.StartScreenDialogView_Cancel}"
                                         Command="{Binding CancelUrlCommand}"
                                         Padding="18,0"/>
                             </StackPanel>
                         </StackPanel>
                     </Border>
 
-                    <Button Classes="editor-button" Command="{Binding ExitCommand}"
+                    <Button Command="{Binding ExitCommand}"
                             HorizontalAlignment="Stretch" HorizontalContentAlignment="Left"
                             Padding="12,10" Height="42">
                         <StackPanel Orientation="Horizontal" Spacing="12">
@@ -148,7 +149,7 @@
                                        FontFamily="{DynamicResource ShareX.FontFamily.Icon}"
                                        FontSize="18" FontWeight="Normal"
                                        VerticalAlignment="Center"/>
-                            <TextBlock Text="Exit" FontWeight="Normal" VerticalAlignment="Center"/>
+                            <TextBlock Text="{x:Static res:Strings.StartScreenDialogView_Exit}" FontWeight="Normal" VerticalAlignment="Center"/>
                         </StackPanel>
                     </Button>
                 </StackPanel>
@@ -166,7 +167,7 @@
                                            FontWeight="Normal"
                                            VerticalAlignment="Center"
                                            Foreground="{DynamicResource ShareX.Brush.Text.Secondary}"/>
-                                <TextBlock Text="Recent files"
+                                <TextBlock Text="{x:Static res:Strings.StartScreenDialogView_RecentFiles}"
                                            FontSize="12"
                                            FontWeight="Normal"
                                            Foreground="{DynamicResource ShareX.Brush.Text.Secondary}"
@@ -182,7 +183,7 @@
                                         BorderThickness="1"
                                         CornerRadius="4"
                                         Padding="12">
-                                    <TextBlock Text="No recent image files yet."
+                                    <TextBlock Text="{x:Static res:Strings.StartScreenDialogView_NoRecentImageFiles}"
                                                FontWeight="Normal"
                                                TextWrapping="Wrap"
                                                Foreground="{DynamicResource ShareX.Brush.Text.Secondary}"/>
@@ -196,7 +197,7 @@
                                     </ItemsControl.ItemsPanel>
                                     <ItemsControl.ItemTemplate>
                                         <DataTemplate x:DataType="x:String">
-                                            <Button Classes="editor-button"
+                                            <Button
                                                     Command="{Binding $parent[ItemsControl].((vm:StartScreenDialogViewModel)DataContext).OpenRecentFileCommand}"
                                                     CommandParameter="{Binding}"
                                                     HorizontalAlignment="Stretch"

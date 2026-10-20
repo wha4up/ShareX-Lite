@@ -1,5 +1,6 @@
 <UserControl xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:res="using:ShareX.ImageEditor.Localization"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:theming="using:ShareX.ImageEditor.Presentation.Theming"
@@ -10,7 +11,6 @@
     <Grid>
         <!-- Dropdown Button -->
         <Button x:Name="DropdownButton"
-                Classes="editor-button"
                 Click="OnDropdownButtonClick"
                 Height="40"
                 MinWidth="80"
@@ -66,11 +66,10 @@
                         </ItemsControl.ItemsPanel>
                         <ItemsControl.ItemTemplate>
                             <DataTemplate x:DataType="x:Double">
-                                <Button Height="32"
+                                <Button Classes="transparent-button"
+                                        Height="32"
                                         MinWidth="60"
                                         Margin="0"
-                                        Background="Transparent"
-                                        BorderThickness="0"
                                         HorizontalAlignment="Stretch"
                                         HorizontalContentAlignment="Center"
                                         Click="OnZoomSelected"
@@ -87,15 +86,14 @@
                     <!-- Separator -->
                     <Border Height="1" Background="{DynamicResource ShareX.Brush.Separator}" Margin="4,4"/>
                     <!-- Zoom to Fit -->
-                    <Button Height="32"
+                    <Button Classes="transparent-button"
+                            Height="32"
                             MinWidth="60"
                             Margin="0,0,0,6"
-                            Background="Transparent"
-                            BorderThickness="0"
                             HorizontalAlignment="Stretch"
                             HorizontalContentAlignment="Center"
                             Click="OnZoomToFitSelected">
-                        <TextBlock Text="Zoom to Fit"
+                        <TextBlock Text="{x:Static res:Strings.ZoomPickerDropdown_ZoomtoFit}"
                                    FontSize="12"
                                    FontWeight="SemiBold"
                                    HorizontalAlignment="Center"
