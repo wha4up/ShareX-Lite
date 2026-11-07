@@ -472,6 +472,18 @@
   <data name="ApplicationSettingsWindow_HotkeyRepeatLimit" xml:space="preserve">
     <value>Interval pengulangan tombol pintas (milidetik)</value>
   </data>
+  <data name="ApplicationSettingsWindow_IconPackLabel" xml:space="preserve">
+    <value>Paket ikon:</value>
+  </data>
+  <data name="ApplicationSettingsWindow_IconPackLegacy" xml:space="preserve">
+    <value>Klasik</value>
+  </data>
+  <data name="ApplicationSettingsWindow_IconPackModern" xml:space="preserve">
+    <value>Modern</value>
+  </data>
+  <data name="ApplicationSettingsWindow_Icons" xml:space="preserve">
+    <value>Ikon</value>
+  </data>
   <data name="ApplicationSettingsWindow_ImagePrintSettings" xml:space="preserve">
     <value>Pengaturan cetak gambar...</value>
   </data>
@@ -626,7 +638,10 @@
     <value>Tampilkan penampil isi papan klip</value>
   </data>
   <data name="ApplicationSettingsWindow_ShowEditWithShareXButtonInWindowsExplorerContextMenu" xml:space="preserve">
-    <value>Tampilkan "Edit dengan ShareX" di menu konteks Windows Explorer</value>
+    <value>Tampilkan "Edit di editor gambar ShareX" di menu konteks Windows Explorer</value>
+  </data>
+  <data name="ApplicationSettingsWindow_ShowEditWithShareXPhotoEditorButtonInWindowsExplorerContextMenu" xml:space="preserve">
+    <value>Tampilkan "Edit di editor foto ShareX" di menu konteks Windows Explorer</value>
   </data>
   <data name="ApplicationSettingsWindow_ShowLargeFileSizeWarning" xml:space="preserve">
     <value>Ambang peringatan berkas besar (MB)</value>
@@ -1326,7 +1341,10 @@ Silakan pilih tombol cepat yang berbeda atau keluar dari aplikasi yang bertentan
     <value>Tidak dapat menulis gambar ke jalur:</value>
   </data>
   <data name="IntegrationHelpers_EditWithShareX" xml:space="preserve">
-    <value>Edit dengan ShareX</value>
+    <value>Edit di editor gambar ShareX</value>
+  </data>
+  <data name="IntegrationHelpers_EditWithShareXPhotoEditor" xml:space="preserve">
+    <value>Edit di editor foto ShareX</value>
   </data>
   <data name="IntegrationHelpers_UploadWithShareX" xml:space="preserve">
     <value>Unggah dengan ShareX</value>
@@ -1520,6 +1538,9 @@ Silakan pilih tombol cepat yang berbeda atau keluar dari aplikasi yang bertentan
   <data name="MainMenuBuilder_NetworkMonitor" xml:space="preserve">
     <value>Pemantau jaringan...</value>
   </data>
+  <data name="MainMenuBuilder_NewBadge" xml:space="preserve">
+    <value>Baru</value>
+  </data>
   <data name="MainMenuBuilder_NoImageEffectPresets" xml:space="preserve">
     <value>Tidak ada preset efek gambar</value>
   </data>
@@ -1532,6 +1553,9 @@ Silakan pilih tombol cepat yang berbeda atau keluar dari aplikasi yang bertentan
   <data name="MainMenuBuilder_Open" xml:space="preserve">
     <value>Buka</value>
   </data>
+  <data name="MainMenuBuilder_PhotoEditor" xml:space="preserve">
+    <value>Editor foto</value>
+  </data>
   <data name="MainMenuBuilder_PinToScreenDialog" xml:space="preserve">
     <value>Sematkan ke layar</value>
   </data>
@@ -1543,6 +1567,9 @@ Silakan pilih tombol cepat yang berbeda atau keluar dari aplikasi yang bertentan
   </data>
   <data name="MainMenuBuilder_Region" xml:space="preserve">
     <value>Wilayah...</value>
+  </data>
+  <data name="MainMenuBuilder_RegionTransparent" xml:space="preserve">
+    <value>Wilayah (transparan)...</value>
   </data>
   <data name="MainMenuBuilder_RemoteStorageBrowser" xml:space="preserve">
     <value>Browser penyimpanan jarak jauh...</value>
@@ -1579,6 +1606,9 @@ Silakan pilih tombol cepat yang berbeda atau keluar dari aplikasi yang bertentan
   </data>
   <data name="MainMenuBuilder_ShowShareX" xml:space="preserve">
     <value>Tampilkan ShareX</value>
+  </data>
+  <data name="MainMenuBuilder_Stats" xml:space="preserve">
+    <value>Statistik...</value>
   </data>
   <data name="MainMenuBuilder_TaskSettings" xml:space="preserve">
     <value>Pengaturan tugas</value>
@@ -1696,6 +1726,9 @@ Silakan pilih tombol cepat yang berbeda atau keluar dari aplikasi yang bertentan
   </data>
   <data name="MainWindow_EditImage" xml:space="preserve">
     <value>Edit gambar</value>
+  </data>
+  <data name="MainWindow_EditImageInPhotoEditor" xml:space="preserve">
+    <value>Edit di editor foto...</value>
   </data>
   <data name="MainWindow_File" xml:space="preserve">
     <value>File</value>
@@ -2276,6 +2309,9 @@ Apakah Anda ingin membatalkan perekaman layar aktif?</value>
   <data name="TaskSettingsWindow_CloseOCRWindowAfterOpeningServiceLink" xml:space="preserve">
     <value>Tutup jendela OCR setelah membuka tautan layanan</value>
   </data>
+  <data name="TaskSettingsWindow_CompactRegionCaptureToolbar" xml:space="preserve">
+    <value>Bilah alat tangkap wilayah yang ringkas</value>
+  </data>
   <data name="TaskSettingsWindow_ConfigureWithEllipsis" xml:space="preserve">
     <value>Konfigurasikan...</value>
   </data>
@@ -2305,6 +2341,9 @@ Apakah Anda ingin membatalkan perekaman layar aktif?</value>
   </data>
   <data name="TaskSettingsWindow_DetectWindowRegions" xml:space="preserve">
     <value>Deteksi wilayah jendela</value>
+  </data>
+  <data name="TaskSettingsWindow_DimHoveredWindowsAndControls" xml:space="preserve">
+    <value>Redupkan jendela dan kontrol di bawah kursor</value>
   </data>
   <data name="TaskSettingsWindow_DisableToastNotificationsOnFullscreen" xml:space="preserve">
     <value>Nonaktifkan notifikasi saat layar penuh</value>
@@ -2497,6 +2536,9 @@ Apakah Anda ingin membatalkan perekaman layar aktif?</value>
   </data>
   <data name="TaskSettingsWindow_MoveUp" xml:space="preserve">
     <value>Pindah ke atas</value>
+  </data>
+  <data name="TaskSettingsWindow_MultiRegionMode" xml:space="preserve">
+    <value>Mode multi-area</value>
   </data>
   <data name="TaskSettingsWindow_Name" xml:space="preserve">
     <value>Nama</value>
@@ -2992,6 +3034,18 @@ Apakah Anda ingin membatalkan perekaman layar aktif?</value>
   </data>
   <data name="TaskSettingsWindow_WaveAudio" xml:space="preserve">
     <value>Audio Wave</value>
+  </data>
+  <data name="TaskSettingsWindow_WebPCompressionEffort" xml:space="preserve">
+    <value>Upaya kompresi WebP:</value>
+  </data>
+  <data name="TaskSettingsWindow_WebPCompressionEffortHint" xml:space="preserve">
+    <value>Nilai yang lebih rendah mempercepat pengodean. Nilai yang lebih tinggi menghasilkan berkas yang lebih kecil. Semua nilai mempertahankan kualitas gambar.</value>
+  </data>
+  <data name="TaskSettingsWindow_WebPLossless" xml:space="preserve">
+    <value>Tanpa kehilangan</value>
+  </data>
+  <data name="TaskSettingsWindow_WebPQuality" xml:space="preserve">
+    <value>Kualitas WebP:</value>
   </data>
   <data name="TaskSettingsWindow_Width" xml:space="preserve">
     <value>Lebar:</value>

@@ -88,6 +88,7 @@ public partial class ImageHistoryWindow : Window
         InitializeComponent();
         RequestedThemeVariant = ThemeManager.GetCurrentTheme();
         ThumbnailRows.ItemsSource = _rows;
+        ThumbnailRows.AddHandler(KeyDownEvent, OnWindowKeyDown, RoutingStrategies.Tunnel);
         _filterTimer = new DispatcherTimer { Interval = TimeSpan.FromMilliseconds(220) };
         _filterTimer.Tick += OnFilterTimerTick;
     }
@@ -910,8 +911,8 @@ public partial class ImageHistoryWindow : Window
             if (ReferenceEquals(_filteredHistoryItems[i], item)) selectedIndex = files.Count;
             files.Add(path);
         }
-        if (_services.ShowImages != null) _services.ShowImages(files, selectedIndex);
-        else _services.ShowImage?.Invoke(item.FilePath);
+        if (_services.ShowImages != null) _services.ShowImages(files, selectedIndex, this);
+        else _services.ShowImage?.Invoke(item.FilePath, this);
     }
 
     private void OnOpenFileClick(object? sender, RoutedEventArgs e)
@@ -991,6 +992,8 @@ public partial class ImageHistoryWindow : Window
 
     private void OnUploadFileClick(object? sender, RoutedEventArgs e) => InvokeFileService(_services.UploadFile, false);
     private void OnEditImageClick(object? sender, RoutedEventArgs e) => InvokeFileService(_services.EditImage, true);
+
+    private void OnEditImageInPhotoEditorClick(object? sender, RoutedEventArgs e) => InvokeFileService(_services.EditImageInPhotoEditor, true);
     private void OnTrimVideoClick(object? sender, RoutedEventArgs e)
     {
         HistoryItem[] items = GetSelectedItems();

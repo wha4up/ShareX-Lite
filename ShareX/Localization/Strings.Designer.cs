@@ -422,6 +422,15 @@ namespace ShareX.Localization {
                 return ResourceManager.GetString("MainMenuBuilder_ImageEditor", resourceCulture);
             }
         }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Photo editor....
+        /// </summary>
+        public static string MainMenuBuilder_PhotoEditor {
+            get {
+                return ResourceManager.GetString("MainMenuBuilder_PhotoEditor", resourceCulture);
+            }
+        }
         
         /// <summary>
         ///   Looks up a localized string similar to Image effects....
@@ -1080,6 +1089,15 @@ namespace ShareX.Localization {
         }
 
         /// <summary>
+        ///   Looks up a localized string similar to Edit in Photo editor....
+        /// </summary>
+        public static string MainWindow_EditImageInPhotoEditor {
+            get {
+                return ResourceManager.GetString("MainWindow_EditImageInPhotoEditor", resourceCulture);
+            }
+        }
+
+        /// <summary>
         ///   Looks up a localized string similar to Resize image....
         /// </summary>
         public static string MainWindow_ResizeImage {
@@ -1673,6 +1691,11 @@ namespace ShareX.Localization {
         public static string ApplicationSettingsWindow_ShowEditWithShareXButtonInWindowsExplorerContextMenu {
             get {
                 return ResourceManager.GetString("ApplicationSettingsWindow_ShowEditWithShareXButtonInWindowsExplorerContextMenu", resourceCulture);
+            }
+        }
+        public static string ApplicationSettingsWindow_ShowEditWithShareXPhotoEditorButtonInWindowsExplorerContextMenu {
+            get {
+                return ResourceManager.GetString("ApplicationSettingsWindow_ShowEditWithShareXPhotoEditorButtonInWindowsExplorerContextMenu", resourceCulture);
             }
         }
         public static string ApplicationSettingsWindow_ShowShareXInSendToMenu {
@@ -2893,6 +2916,26 @@ namespace ShareX.Localization {
                 return ResourceManager.GetString("TaskSettingsWindow_JPEGQuality", resourceCulture);
             }
         }
+        public static string TaskSettingsWindow_WebPQuality {
+            get {
+                return ResourceManager.GetString("TaskSettingsWindow_WebPQuality", resourceCulture);
+            }
+        }
+        public static string TaskSettingsWindow_WebPLossless {
+            get {
+                return ResourceManager.GetString("TaskSettingsWindow_WebPLossless", resourceCulture);
+            }
+        }
+        public static string TaskSettingsWindow_WebPCompressionEffort {
+            get {
+                return ResourceManager.GetString("TaskSettingsWindow_WebPCompressionEffort", resourceCulture);
+            }
+        }
+        public static string TaskSettingsWindow_WebPCompressionEffortHint {
+            get {
+                return ResourceManager.GetString("TaskSettingsWindow_WebPCompressionEffortHint", resourceCulture);
+            }
+        }
 
         /// <summary>
         ///   Looks up a localized string similar to JPEG chroma subsampling:.
@@ -3086,6 +3129,11 @@ namespace ShareX.Localization {
         public static string TaskSettingsWindow_BackgroundDimStrengthPercent {
             get {
                 return ResourceManager.GetString("TaskSettingsWindow_BackgroundDimStrengthPercent", resourceCulture);
+            }
+        }
+        public static string TaskSettingsWindow_DimHoveredWindowsAndControls {
+            get {
+                return ResourceManager.GetString("TaskSettingsWindow_DimHoveredWindowsAndControls", resourceCulture);
             }
         }
         public static string TaskSettingsWindow_RightClick {
@@ -5263,6 +5311,11 @@ namespace ShareX.Localization {
                 return ResourceManager.GetString("IntegrationHelpers_EditWithShareX", resourceCulture);
             }
         }
+        public static string IntegrationHelpers_EditWithShareXPhotoEditor {
+            get {
+                return ResourceManager.GetString("IntegrationHelpers_EditWithShareXPhotoEditor", resourceCulture);
+            }
+        }
         public static string ClipboardDoesNotContainAnImage {
             get {
                 return ResourceManager.GetString("ClipboardDoesNotContainAnImage", resourceCulture);
@@ -5594,5 +5647,14 @@ namespace ShareX.Localization {
         public static string ScreenRecorderBar_StartDelay_4Seconds => ResourceManager.GetString("ScreenRecorderBar_StartDelay_4Seconds", resourceCulture);
         public static string ScreenRecorderBar_StartDelay_5Seconds => ResourceManager.GetString("ScreenRecorderBar_StartDelay_5Seconds", resourceCulture);
         public static string MainMenuBuilder_VideoPlayer => ResourceManager.GetString("MainMenuBuilder_VideoPlayer", resourceCulture);
+        public static string MainMenuBuilder_Stats => ResourceManager.GetString("MainMenuBuilder_Stats", resourceCulture);
+        public static string MainMenuBuilder_NewBadge => ResourceManager.GetString("MainMenuBuilder_NewBadge", resourceCulture);
+        public static string ApplicationSettingsWindow_IconPackLabel => ResourceManager.GetString("ApplicationSettingsWindow_IconPackLabel", resourceCulture);
+        public static string ApplicationSettingsWindow_IconPackLegacy => ResourceManager.GetString("ApplicationSettingsWindow_IconPackLegacy", resourceCulture);
+        public static string ApplicationSettingsWindow_IconPackModern => ResourceManager.GetString("ApplicationSettingsWindow_IconPackModern", resourceCulture);
+        public static string ApplicationSettingsWindow_Icons => ResourceManager.GetString("ApplicationSettingsWindow_Icons", resourceCulture);
+        public static string TaskSettingsWindow_MultiRegionMode => ResourceManager.GetString("TaskSettingsWindow_MultiRegionMode", resourceCulture);
+        public static string TaskSettingsWindow_CompactRegionCaptureToolbar => ResourceManager.GetString("TaskSettingsWindow_CompactRegionCaptureToolbar", resourceCulture);
+        public static string MainMenuBuilder_RegionTransparent => ResourceManager.GetString("MainMenuBuilder_RegionTransparent", resourceCulture);
     }
 }

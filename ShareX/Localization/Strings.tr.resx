@@ -472,6 +472,18 @@
   <data name="ApplicationSettingsWindow_HotkeyRepeatLimit" xml:space="preserve">
     <value>Kısayol tekrarlama aralığı (milisaniye)</value>
   </data>
+  <data name="ApplicationSettingsWindow_IconPackLabel" xml:space="preserve">
+    <value>Simge paketi:</value>
+  </data>
+  <data name="ApplicationSettingsWindow_IconPackLegacy" xml:space="preserve">
+    <value>Klasik</value>
+  </data>
+  <data name="ApplicationSettingsWindow_IconPackModern" xml:space="preserve">
+    <value>Modern</value>
+  </data>
+  <data name="ApplicationSettingsWindow_Icons" xml:space="preserve">
+    <value>Simgeler</value>
+  </data>
   <data name="ApplicationSettingsWindow_ImagePrintSettings" xml:space="preserve">
     <value>Resim yazdırma ayarları...</value>
   </data>
@@ -626,7 +638,10 @@
     <value>Pano içerik görüntüleyicisini göster</value>
   </data>
   <data name="ApplicationSettingsWindow_ShowEditWithShareXButtonInWindowsExplorerContextMenu" xml:space="preserve">
-    <value>Windows Gezgini bağlam menüsünde "ShareX ile düzenle" düğmesini göster</value>
+    <value>Windows Gezgini bağlam menüsünde "ShareX resim düzenleyicide düzenle" düğmesini göster</value>
+  </data>
+  <data name="ApplicationSettingsWindow_ShowEditWithShareXPhotoEditorButtonInWindowsExplorerContextMenu" xml:space="preserve">
+    <value>Windows Gezgini bağlam menüsünde "ShareX fotoğraf düzenleyicide düzenle" düğmesini göster</value>
   </data>
   <data name="ApplicationSettingsWindow_ShowLargeFileSizeWarning" xml:space="preserve">
     <value>Büyük dosya uyarı eşiği (MB)</value>
@@ -1326,7 +1341,10 @@ Lütfen başka bir kısayol seçin veya çakışan uygulamayı kapatın ve Share
     <value>Resim buraya kaydedilemedi:</value>
   </data>
   <data name="IntegrationHelpers_EditWithShareX" xml:space="preserve">
-    <value>ShareX ile düzenle</value>
+    <value>ShareX resim düzenleyicide düzenle</value>
+  </data>
+  <data name="IntegrationHelpers_EditWithShareXPhotoEditor" xml:space="preserve">
+    <value>ShareX fotoğraf düzenleyicide düzenle</value>
   </data>
   <data name="IntegrationHelpers_UploadWithShareX" xml:space="preserve">
     <value>ShareX ile yükle</value>
@@ -1520,6 +1538,9 @@ Lütfen başka bir kısayol seçin veya çakışan uygulamayı kapatın ve Share
   <data name="MainMenuBuilder_NetworkMonitor" xml:space="preserve">
     <value>Ağ izleyicisi...</value>
   </data>
+  <data name="MainMenuBuilder_NewBadge" xml:space="preserve">
+    <value>Yeni</value>
+  </data>
   <data name="MainMenuBuilder_NoImageEffectPresets" xml:space="preserve">
     <value>Resim efekti ön ayarı yok</value>
   </data>
@@ -1532,6 +1553,9 @@ Lütfen başka bir kısayol seçin veya çakışan uygulamayı kapatın ve Share
   <data name="MainMenuBuilder_Open" xml:space="preserve">
     <value>Aç</value>
   </data>
+  <data name="MainMenuBuilder_PhotoEditor" xml:space="preserve">
+    <value>Fotoğraf düzenleyici...</value>
+  </data>
   <data name="MainMenuBuilder_PinToScreenDialog" xml:space="preserve">
     <value>Ekrana sabitle...</value>
   </data>
@@ -1543,6 +1567,9 @@ Lütfen başka bir kısayol seçin veya çakışan uygulamayı kapatın ve Share
   </data>
   <data name="MainMenuBuilder_Region" xml:space="preserve">
     <value>Bölge...</value>
+  </data>
+  <data name="MainMenuBuilder_RegionTransparent" xml:space="preserve">
+    <value>Bölge (saydam)...</value>
   </data>
   <data name="MainMenuBuilder_RemoteStorageBrowser" xml:space="preserve">
     <value>Uzak depolama tarayıcısı...</value>
@@ -1579,6 +1606,9 @@ Lütfen başka bir kısayol seçin veya çakışan uygulamayı kapatın ve Share
   </data>
   <data name="MainMenuBuilder_ShowShareX" xml:space="preserve">
     <value>ShareX'i göster</value>
+  </data>
+  <data name="MainMenuBuilder_Stats" xml:space="preserve">
+    <value>İstatistikler...</value>
   </data>
   <data name="MainMenuBuilder_TaskSettings" xml:space="preserve">
     <value>Görev ayarları...</value>
@@ -1696,6 +1726,9 @@ Lütfen başka bir kısayol seçin veya çakışan uygulamayı kapatın ve Share
   </data>
   <data name="MainWindow_EditImage" xml:space="preserve">
     <value>Resmi düzenle...</value>
+  </data>
+  <data name="MainWindow_EditImageInPhotoEditor" xml:space="preserve">
+    <value>Fotoğraf düzenleyicide düzenle...</value>
   </data>
   <data name="MainWindow_File" xml:space="preserve">
     <value>Dosya</value>
@@ -2276,6 +2309,9 @@ Aktif ekran kaydını sonlandırmak istiyor musunuz?</value>
   <data name="TaskSettingsWindow_CloseOCRWindowAfterOpeningServiceLink" xml:space="preserve">
     <value>Hizmet bağlantısını açtıktan sonra OCR penceresini kapat</value>
   </data>
+  <data name="TaskSettingsWindow_CompactRegionCaptureToolbar" xml:space="preserve">
+    <value>Kompakt bölge yakalama araç çubuğu</value>
+  </data>
   <data name="TaskSettingsWindow_ConfigureWithEllipsis" xml:space="preserve">
     <value>Yapılandır...</value>
   </data>
@@ -2305,6 +2341,9 @@ Aktif ekran kaydını sonlandırmak istiyor musunuz?</value>
   </data>
   <data name="TaskSettingsWindow_DetectWindowRegions" xml:space="preserve">
     <value>Pencere bölgelerini algıla</value>
+  </data>
+  <data name="TaskSettingsWindow_DimHoveredWindowsAndControls" xml:space="preserve">
+    <value>İmlecin altındaki pencereleri ve denetimleri karart</value>
   </data>
   <data name="TaskSettingsWindow_DisableToastNotificationsOnFullscreen" xml:space="preserve">
     <value>Tam ekranda bildirimleri devre dışı bırak</value>
@@ -2497,6 +2536,9 @@ Aktif ekran kaydını sonlandırmak istiyor musunuz?</value>
   </data>
   <data name="TaskSettingsWindow_MoveUp" xml:space="preserve">
     <value>Yukarı taşı</value>
+  </data>
+  <data name="TaskSettingsWindow_MultiRegionMode" xml:space="preserve">
+    <value>Çoklu bölge modu</value>
   </data>
   <data name="TaskSettingsWindow_Name" xml:space="preserve">
     <value>Ad</value>
@@ -2992,6 +3034,18 @@ Aktif ekran kaydını sonlandırmak istiyor musunuz?</value>
   </data>
   <data name="TaskSettingsWindow_WaveAudio" xml:space="preserve">
     <value>Wave ses dosyası</value>
+  </data>
+  <data name="TaskSettingsWindow_WebPCompressionEffort" xml:space="preserve">
+    <value>WebP sıkıştırma çabası:</value>
+  </data>
+  <data name="TaskSettingsWindow_WebPCompressionEffortHint" xml:space="preserve">
+    <value>Düşük değerler daha hızlı kodlama sağlar. Yüksek değerler daha küçük dosyalar üretir. Tüm değerler görüntü kalitesini korur.</value>
+  </data>
+  <data name="TaskSettingsWindow_WebPLossless" xml:space="preserve">
+    <value>Kayıpsız</value>
+  </data>
+  <data name="TaskSettingsWindow_WebPQuality" xml:space="preserve">
+    <value>WebP kalitesi:</value>
   </data>
   <data name="TaskSettingsWindow_Width" xml:space="preserve">
     <value>Genişlik:</value>

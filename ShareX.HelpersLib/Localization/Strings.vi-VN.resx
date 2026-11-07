@@ -94,6 +94,9 @@
   <data name="AfterCaptureTasks_DoOCR" xml:space="preserve">
     <value>Nhận dạng chữ (OCR)</value>
   </data>
+  <data name="AfterCaptureTasks_OpenInPhotoEditor" xml:space="preserve">
+    <value>Mở trong trình chỉnh sửa ảnh</value>
+  </data>
   <data name="AfterCaptureTasks_PerformActions" xml:space="preserve">
     <value>Thực hiện các tác vụ</value>
   </data>
@@ -753,6 +756,9 @@ Bạn vẫn muốn chạy tệp này chứ?</value>
   <data name="HotkeyType_PauseScreenRecording" xml:space="preserve">
     <value>Tạm dừng ghi màn hình</value>
   </data>
+  <data name="HotkeyType_PhotoEditor" xml:space="preserve">
+    <value>Trình chỉnh sửa ảnh chụp</value>
+  </data>
   <data name="HotkeyType_PinToScreen" xml:space="preserve">
     <value>Ghim vào màn hình</value>
   </data>
@@ -782,6 +788,9 @@ Bạn vẫn muốn chạy tệp này chứ?</value>
   </data>
   <data name="HotkeyType_RectangleRegion" xml:space="preserve">
     <value>Chụp theo vùng</value>
+  </data>
+  <data name="HotkeyType_RectangleTransparent" xml:space="preserve">
+    <value>Chụp theo vùng (Trong suốt)</value>
   </data>
   <data name="HotkeyType_Ruler" xml:space="preserve">
     <value>Thước đo</value>

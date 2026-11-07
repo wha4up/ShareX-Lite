@@ -472,6 +472,18 @@
   <data name="ApplicationSettingsWindow_HotkeyRepeatLimit" xml:space="preserve">
     <value>단축키 반복 간격(밀리초)</value>
   </data>
+  <data name="ApplicationSettingsWindow_IconPackLabel" xml:space="preserve">
+    <value>아이콘 팩:</value>
+  </data>
+  <data name="ApplicationSettingsWindow_IconPackLegacy" xml:space="preserve">
+    <value>클래식</value>
+  </data>
+  <data name="ApplicationSettingsWindow_IconPackModern" xml:space="preserve">
+    <value>모던</value>
+  </data>
+  <data name="ApplicationSettingsWindow_Icons" xml:space="preserve">
+    <value>아이콘</value>
+  </data>
   <data name="ApplicationSettingsWindow_ImagePrintSettings" xml:space="preserve">
     <value>이미지 인쇄 설정...</value>
   </data>
@@ -626,7 +638,10 @@
     <value>클립보드 내용 뷰어 표시</value>
   </data>
   <data name="ApplicationSettingsWindow_ShowEditWithShareXButtonInWindowsExplorerContextMenu" xml:space="preserve">
-    <value>Windows 탐색기의 컨택스트 메뉴에 "ShareX로 편집"버튼 표시</value>
+    <value>Windows 탐색기의 컨택스트 메뉴에 "ShareX 이미지 편집기에서 편집" 버튼 표시</value>
+  </data>
+  <data name="ApplicationSettingsWindow_ShowEditWithShareXPhotoEditorButtonInWindowsExplorerContextMenu" xml:space="preserve">
+    <value>Windows 탐색기의 컨택스트 메뉴에 "ShareX 사진 편집기에서 편집" 버튼 표시</value>
   </data>
   <data name="ApplicationSettingsWindow_ShowLargeFileSizeWarning" xml:space="preserve">
     <value>대용량 파일 경고 기준(MB)</value>
@@ -1326,7 +1341,10 @@
     <value>Could not write 이미지 to 경로:</value>
   </data>
   <data name="IntegrationHelpers_EditWithShareX" xml:space="preserve">
-    <value>ShareX로 편집하기</value>
+    <value>ShareX 이미지 편집기에서 편집</value>
+  </data>
+  <data name="IntegrationHelpers_EditWithShareXPhotoEditor" xml:space="preserve">
+    <value>ShareX 사진 편집기에서 편집</value>
   </data>
   <data name="IntegrationHelpers_UploadWithShareX" xml:space="preserve">
     <value>ShareX로 업로드</value>
@@ -1520,6 +1538,9 @@
   <data name="MainMenuBuilder_NetworkMonitor" xml:space="preserve">
     <value>네트워크 모니터...</value>
   </data>
+  <data name="MainMenuBuilder_NewBadge" xml:space="preserve">
+    <value>신규</value>
+  </data>
   <data name="MainMenuBuilder_NoImageEffectPresets" xml:space="preserve">
     <value>이미지 효과 사전 설정 없음</value>
   </data>
@@ -1532,6 +1553,9 @@
   <data name="MainMenuBuilder_Open" xml:space="preserve">
     <value>열기</value>
   </data>
+  <data name="MainMenuBuilder_PhotoEditor" xml:space="preserve">
+    <value>사진 편집기</value>
+  </data>
   <data name="MainMenuBuilder_PinToScreenDialog" xml:space="preserve">
     <value>화면에 고정</value>
   </data>
@@ -1543,6 +1567,9 @@
   </data>
   <data name="MainMenuBuilder_Region" xml:space="preserve">
     <value>영역...</value>
+  </data>
+  <data name="MainMenuBuilder_RegionTransparent" xml:space="preserve">
+    <value>영역 (투명)...</value>
   </data>
   <data name="MainMenuBuilder_RemoteStorageBrowser" xml:space="preserve">
     <value>원격 저장소 브라우저...</value>
@@ -1579,6 +1606,9 @@
   </data>
   <data name="MainMenuBuilder_ShowShareX" xml:space="preserve">
     <value>ShareX 표시</value>
+  </data>
+  <data name="MainMenuBuilder_Stats" xml:space="preserve">
+    <value>통계...</value>
   </data>
   <data name="MainMenuBuilder_TaskSettings" xml:space="preserve">
     <value>작업 설정</value>
@@ -1696,6 +1726,9 @@
   </data>
   <data name="MainWindow_EditImage" xml:space="preserve">
     <value>편집 이미지</value>
+  </data>
+  <data name="MainWindow_EditImageInPhotoEditor" xml:space="preserve">
+    <value>사진 편집기에서 편집...</value>
   </data>
   <data name="MainWindow_File" xml:space="preserve">
     <value>파일</value>
@@ -2276,6 +2309,9 @@ Do you want to abort the active 화면 녹화?</value>
   <data name="TaskSettingsWindow_CloseOCRWindowAfterOpeningServiceLink" xml:space="preserve">
     <value>서비스 링크를 연 후 OCR 창 닫기</value>
   </data>
+  <data name="TaskSettingsWindow_CompactRegionCaptureToolbar" xml:space="preserve">
+    <value>영역 캡처 도구 모음을 작게 표시</value>
+  </data>
   <data name="TaskSettingsWindow_ConfigureWithEllipsis" xml:space="preserve">
     <value>구성...</value>
   </data>
@@ -2305,6 +2341,9 @@ Do you want to abort the active 화면 녹화?</value>
   </data>
   <data name="TaskSettingsWindow_DetectWindowRegions" xml:space="preserve">
     <value>창 영역 감지</value>
+  </data>
+  <data name="TaskSettingsWindow_DimHoveredWindowsAndControls" xml:space="preserve">
+    <value>커서 아래의 창과 컨트롤 어둡게 하기</value>
   </data>
   <data name="TaskSettingsWindow_DisableToastNotificationsOnFullscreen" xml:space="preserve">
     <value>전체 화면에서 알림 비활성화</value>
@@ -2497,6 +2536,9 @@ Do you want to abort the active 화면 녹화?</value>
   </data>
   <data name="TaskSettingsWindow_MoveUp" xml:space="preserve">
     <value>위로 이동</value>
+  </data>
+  <data name="TaskSettingsWindow_MultiRegionMode" xml:space="preserve">
+    <value>멀티 영역 모드</value>
   </data>
   <data name="TaskSettingsWindow_Name" xml:space="preserve">
     <value>이름</value>
@@ -2992,6 +3034,18 @@ Do you want to abort the active 화면 녹화?</value>
   </data>
   <data name="TaskSettingsWindow_WaveAudio" xml:space="preserve">
     <value>Wave 오디오</value>
+  </data>
+  <data name="TaskSettingsWindow_WebPCompressionEffort" xml:space="preserve">
+    <value>WebP 압축 노력 수준:</value>
+  </data>
+  <data name="TaskSettingsWindow_WebPCompressionEffortHint" xml:space="preserve">
+    <value>값이 낮을수록 인코딩이 빨라집니다. 값이 높을수록 파일 크기가 작아집니다. 모든 값에서 이미지 품질이 유지됩니다.</value>
+  </data>
+  <data name="TaskSettingsWindow_WebPLossless" xml:space="preserve">
+    <value>무손실</value>
+  </data>
+  <data name="TaskSettingsWindow_WebPQuality" xml:space="preserve">
+    <value>WebP 품질:</value>
   </data>
   <data name="TaskSettingsWindow_Width" xml:space="preserve">
     <value>너비:</value>

@@ -472,6 +472,18 @@
   <data name="ApplicationSettingsWindow_HotkeyRepeatLimit" xml:space="preserve">
     <value>快捷键重复间隔（毫秒）</value>
   </data>
+  <data name="ApplicationSettingsWindow_IconPackLabel" xml:space="preserve">
+    <value>图标包：</value>
+  </data>
+  <data name="ApplicationSettingsWindow_IconPackLegacy" xml:space="preserve">
+    <value>经典</value>
+  </data>
+  <data name="ApplicationSettingsWindow_IconPackModern" xml:space="preserve">
+    <value>现代</value>
+  </data>
+  <data name="ApplicationSettingsWindow_Icons" xml:space="preserve">
+    <value>图标</value>
+  </data>
   <data name="ApplicationSettingsWindow_ImagePrintSettings" xml:space="preserve">
     <value>图片打印设置...</value>
   </data>
@@ -626,7 +638,10 @@
     <value>显示剪贴板内容查看器</value>
   </data>
   <data name="ApplicationSettingsWindow_ShowEditWithShareXButtonInWindowsExplorerContextMenu" xml:space="preserve">
-    <value>在Windows上下文菜单中显示“使用ShareX编辑”</value>
+    <value>在Windows上下文菜单中显示“使用ShareX图像编辑器编辑”</value>
+  </data>
+  <data name="ApplicationSettingsWindow_ShowEditWithShareXPhotoEditorButtonInWindowsExplorerContextMenu" xml:space="preserve">
+    <value>在Windows上下文菜单中显示“使用ShareX照片编辑器编辑”</value>
   </data>
   <data name="ApplicationSettingsWindow_ShowLargeFileSizeWarning" xml:space="preserve">
     <value>大文件警告阈值（MB）</value>
@@ -1326,7 +1341,10 @@
     <value>图像无法写入路径：</value>
   </data>
   <data name="IntegrationHelpers_EditWithShareX" xml:space="preserve">
-    <value>使用ShareX编辑</value>
+    <value>使用ShareX图像编辑器编辑</value>
+  </data>
+  <data name="IntegrationHelpers_EditWithShareXPhotoEditor" xml:space="preserve">
+    <value>使用ShareX照片编辑器编辑</value>
   </data>
   <data name="IntegrationHelpers_UploadWithShareX" xml:space="preserve">
     <value>使用 ShareX 上传</value>
@@ -1520,6 +1538,9 @@
   <data name="MainMenuBuilder_NetworkMonitor" xml:space="preserve">
     <value>网络监控器...</value>
   </data>
+  <data name="MainMenuBuilder_NewBadge" xml:space="preserve">
+    <value>新</value>
+  </data>
   <data name="MainMenuBuilder_NoImageEffectPresets" xml:space="preserve">
     <value>没有图像效果预设</value>
   </data>
@@ -1532,6 +1553,9 @@
   <data name="MainMenuBuilder_Open" xml:space="preserve">
     <value>打开</value>
   </data>
+  <data name="MainMenuBuilder_PhotoEditor" xml:space="preserve">
+    <value>照片编辑器</value>
+  </data>
   <data name="MainMenuBuilder_PinToScreenDialog" xml:space="preserve">
     <value>固定到屏幕</value>
   </data>
@@ -1543,6 +1567,9 @@
   </data>
   <data name="MainMenuBuilder_Region" xml:space="preserve">
     <value>区域...</value>
+  </data>
+  <data name="MainMenuBuilder_RegionTransparent" xml:space="preserve">
+    <value>区域（透明）...</value>
   </data>
   <data name="MainMenuBuilder_RemoteStorageBrowser" xml:space="preserve">
     <value>远程存储浏览器...</value>
@@ -1579,6 +1606,9 @@
   </data>
   <data name="MainMenuBuilder_ShowShareX" xml:space="preserve">
     <value>显示 ShareX</value>
+  </data>
+  <data name="MainMenuBuilder_Stats" xml:space="preserve">
+    <value>统计...</value>
   </data>
   <data name="MainMenuBuilder_TaskSettings" xml:space="preserve">
     <value>任务设置</value>
@@ -1696,6 +1726,9 @@
   </data>
   <data name="MainWindow_EditImage" xml:space="preserve">
     <value>编辑图像</value>
+  </data>
+  <data name="MainWindow_EditImageInPhotoEditor" xml:space="preserve">
+    <value>在照片编辑器中编辑...</value>
   </data>
   <data name="MainWindow_File" xml:space="preserve">
     <value>文件</value>
@@ -2276,6 +2309,9 @@
   <data name="TaskSettingsWindow_CloseOCRWindowAfterOpeningServiceLink" xml:space="preserve">
     <value>打开服务链接后关闭 OCR 窗口</value>
   </data>
+  <data name="TaskSettingsWindow_CompactRegionCaptureToolbar" xml:space="preserve">
+    <value>紧凑型区域截图工具栏</value>
+  </data>
   <data name="TaskSettingsWindow_ConfigureWithEllipsis" xml:space="preserve">
     <value>配置...</value>
   </data>
@@ -2305,6 +2341,9 @@
   </data>
   <data name="TaskSettingsWindow_DetectWindowRegions" xml:space="preserve">
     <value>检测窗口区域</value>
+  </data>
+  <data name="TaskSettingsWindow_DimHoveredWindowsAndControls" xml:space="preserve">
+    <value>使光标下的窗口和控件变暗</value>
   </data>
   <data name="TaskSettingsWindow_DisableToastNotificationsOnFullscreen" xml:space="preserve">
     <value>全屏时禁用通知</value>
@@ -2497,6 +2536,9 @@
   </data>
   <data name="TaskSettingsWindow_MoveUp" xml:space="preserve">
     <value>上移</value>
+  </data>
+  <data name="TaskSettingsWindow_MultiRegionMode" xml:space="preserve">
+    <value>多区域模式</value>
   </data>
   <data name="TaskSettingsWindow_Name" xml:space="preserve">
     <value>名称</value>
@@ -2992,6 +3034,18 @@
   </data>
   <data name="TaskSettingsWindow_WaveAudio" xml:space="preserve">
     <value>Wave 音频</value>
+  </data>
+  <data name="TaskSettingsWindow_WebPCompressionEffort" xml:space="preserve">
+    <value>WebP 压缩力度：</value>
+  </data>
+  <data name="TaskSettingsWindow_WebPCompressionEffortHint" xml:space="preserve">
+    <value>较低的值可加快编码速度。较高的值可生成更小的文件。所有值都会保持图像质量。</value>
+  </data>
+  <data name="TaskSettingsWindow_WebPLossless" xml:space="preserve">
+    <value>无损</value>
+  </data>
+  <data name="TaskSettingsWindow_WebPQuality" xml:space="preserve">
+    <value>WebP 质量：</value>
   </data>
   <data name="TaskSettingsWindow_Width" xml:space="preserve">
     <value>宽度：</value>

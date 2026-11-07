@@ -94,6 +94,9 @@
   <data name="AfterCaptureTasks_DoOCR" xml:space="preserve">
     <value>Распознать текст (OCR)</value>
   </data>
+  <data name="AfterCaptureTasks_OpenInPhotoEditor" xml:space="preserve">
+    <value>Открыть в фоторедакторе</value>
+  </data>
   <data name="AfterCaptureTasks_PerformActions" xml:space="preserve">
     <value>Выполнить действия</value>
   </data>
@@ -753,6 +756,9 @@
   <data name="HotkeyType_PauseScreenRecording" xml:space="preserve">
     <value>Приостановить запись</value>
   </data>
+  <data name="HotkeyType_PhotoEditor" xml:space="preserve">
+    <value>Фоторедактор</value>
+  </data>
   <data name="HotkeyType_PinToScreen" xml:space="preserve">
     <value>Закрепить на экране</value>
   </data>
@@ -782,6 +788,9 @@
   </data>
   <data name="HotkeyType_RectangleRegion" xml:space="preserve">
     <value>Захват области</value>
+  </data>
+  <data name="HotkeyType_RectangleTransparent" xml:space="preserve">
+    <value>Захват области (Прозрачный фон)</value>
   </data>
   <data name="HotkeyType_Ruler" xml:space="preserve">
     <value>Линейка</value>

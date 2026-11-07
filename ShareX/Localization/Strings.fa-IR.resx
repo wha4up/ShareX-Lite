@@ -472,6 +472,18 @@
   <data name="ApplicationSettingsWindow_HotkeyRepeatLimit" xml:space="preserve">
     <value>فاصله تکرار کلید میانبر (میلی‌ثانیه)</value>
   </data>
+  <data name="ApplicationSettingsWindow_IconPackLabel" xml:space="preserve">
+    <value>بسته آیکون:</value>
+  </data>
+  <data name="ApplicationSettingsWindow_IconPackLegacy" xml:space="preserve">
+    <value>قدیمی</value>
+  </data>
+  <data name="ApplicationSettingsWindow_IconPackModern" xml:space="preserve">
+    <value>مدرن</value>
+  </data>
+  <data name="ApplicationSettingsWindow_Icons" xml:space="preserve">
+    <value>آیکون‌ها</value>
+  </data>
   <data name="ApplicationSettingsWindow_ImagePrintSettings" xml:space="preserve">
     <value>تنظیمات چاپ عکس ...</value>
   </data>
@@ -626,7 +638,10 @@
     <value>نمایش مشاهده‌گر محتوای کلیپ‌بورد</value>
   </data>
   <data name="ApplicationSettingsWindow_ShowEditWithShareXButtonInWindowsExplorerContextMenu" xml:space="preserve">
-    <value>شیرایکس را در راست کلیک منوی ویرایش با ویندوز اکسپلورر اضافه کن</value>
+    <value>دکمه «ویرایش در ویرایشگر تصویر ShareX» را در منوی راست‌کلیک ویندوز اکسپلورر نمایش بده</value>
+  </data>
+  <data name="ApplicationSettingsWindow_ShowEditWithShareXPhotoEditorButtonInWindowsExplorerContextMenu" xml:space="preserve">
+    <value>دکمه «ویرایش در ویرایشگر عکس ShareX» را در منوی راست‌کلیک ویندوز اکسپلورر نمایش بده</value>
   </data>
   <data name="ApplicationSettingsWindow_ShowLargeFileSizeWarning" xml:space="preserve">
     <value>آستانه هشدار فایل بزرگ (مگابایت)</value>
@@ -1326,7 +1341,10 @@ Please select a different hotkey or quit the conflicting application and reبا�
     <value>Could not write تصویر to مسیر:</value>
   </data>
   <data name="IntegrationHelpers_EditWithShareX" xml:space="preserve">
-    <value>ویرایش با ShareX ...</value>
+    <value>ویرایش در ویرایشگر تصویر ShareX</value>
+  </data>
+  <data name="IntegrationHelpers_EditWithShareXPhotoEditor" xml:space="preserve">
+    <value>ویرایش در ویرایشگر عکس ShareX</value>
   </data>
   <data name="IntegrationHelpers_UploadWithShareX" xml:space="preserve">
     <value>آپلود با ShareX</value>
@@ -1520,6 +1538,9 @@ Please select a different hotkey or quit the conflicting application and reبا�
   <data name="MainMenuBuilder_NetworkMonitor" xml:space="preserve">
     <value>پایشگر شبکه...</value>
   </data>
+  <data name="MainMenuBuilder_NewBadge" xml:space="preserve">
+    <value>جدید</value>
+  </data>
   <data name="MainMenuBuilder_NoImageEffectPresets" xml:space="preserve">
     <value>هیچ پیش‌تنظیم جلوه تصویری وجود ندارد</value>
   </data>
@@ -1532,6 +1553,9 @@ Please select a different hotkey or quit the conflicting application and reبا�
   <data name="MainMenuBuilder_Open" xml:space="preserve">
     <value>باز کردن</value>
   </data>
+  <data name="MainMenuBuilder_PhotoEditor" xml:space="preserve">
+    <value>ویرایشگر عکاسی</value>
+  </data>
   <data name="MainMenuBuilder_PinToScreenDialog" xml:space="preserve">
     <value>سنجاق به صفحه</value>
   </data>
@@ -1543,6 +1567,9 @@ Please select a different hotkey or quit the conflicting application and reبا�
   </data>
   <data name="MainMenuBuilder_Region" xml:space="preserve">
     <value>ناحیه...</value>
+  </data>
+  <data name="MainMenuBuilder_RegionTransparent" xml:space="preserve">
+    <value>ناحیه (شفاف)...</value>
   </data>
   <data name="MainMenuBuilder_RemoteStorageBrowser" xml:space="preserve">
     <value>مرورگر ذخیره سازی از راه دور...</value>
@@ -1579,6 +1606,9 @@ Please select a different hotkey or quit the conflicting application and reبا�
   </data>
   <data name="MainMenuBuilder_ShowShareX" xml:space="preserve">
     <value>نمایش ShareX</value>
+  </data>
+  <data name="MainMenuBuilder_Stats" xml:space="preserve">
+    <value>آمار...</value>
   </data>
   <data name="MainMenuBuilder_TaskSettings" xml:space="preserve">
     <value>تنظیمات وظیفه</value>
@@ -1696,6 +1726,9 @@ Please select a different hotkey or quit the conflicting application and reبا�
   </data>
   <data name="MainWindow_EditImage" xml:space="preserve">
     <value>ویرایش تصویر</value>
+  </data>
+  <data name="MainWindow_EditImageInPhotoEditor" xml:space="preserve">
+    <value>ویرایش در ویرایشگر عکس...</value>
   </data>
   <data name="MainWindow_File" xml:space="preserve">
     <value>فایل</value>
@@ -2276,6 +2309,9 @@ Do you want to abort the active ضبط صفحه?</value>
   <data name="TaskSettingsWindow_CloseOCRWindowAfterOpeningServiceLink" xml:space="preserve">
     <value>بستن پنجره OCR پس از باز کردن پیوند سرویس</value>
   </data>
+  <data name="TaskSettingsWindow_CompactRegionCaptureToolbar" xml:space="preserve">
+    <value>نوار ابزار فشرده ثبت ناحیه</value>
+  </data>
   <data name="TaskSettingsWindow_ConfigureWithEllipsis" xml:space="preserve">
     <value>پیکربندی...</value>
   </data>
@@ -2305,6 +2341,9 @@ Do you want to abort the active ضبط صفحه?</value>
   </data>
   <data name="TaskSettingsWindow_DetectWindowRegions" xml:space="preserve">
     <value>شناسایی ناحیه‌های پنجره</value>
+  </data>
+  <data name="TaskSettingsWindow_DimHoveredWindowsAndControls" xml:space="preserve">
+    <value>تیره کردن پنجره‌ها و کنترل‌های زیر نشانگر</value>
   </data>
   <data name="TaskSettingsWindow_DisableToastNotificationsOnFullscreen" xml:space="preserve">
     <value>غیرفعال کردن اعلان‌ها در حالت تمام‌صفحه</value>
@@ -2497,6 +2536,9 @@ Do you want to abort the active ضبط صفحه?</value>
   </data>
   <data name="TaskSettingsWindow_MoveUp" xml:space="preserve">
     <value>انتقال به بالا</value>
+  </data>
+  <data name="TaskSettingsWindow_MultiRegionMode" xml:space="preserve">
+    <value>حالت چندناحیه‌ای</value>
   </data>
   <data name="TaskSettingsWindow_Name" xml:space="preserve">
     <value>نام</value>
@@ -2992,6 +3034,18 @@ Do you want to abort the active ضبط صفحه?</value>
   </data>
   <data name="TaskSettingsWindow_WaveAudio" xml:space="preserve">
     <value>صدای Wave</value>
+  </data>
+  <data name="TaskSettingsWindow_WebPCompressionEffort" xml:space="preserve">
+    <value>تلاش فشرده‌سازی WebP:</value>
+  </data>
+  <data name="TaskSettingsWindow_WebPCompressionEffortHint" xml:space="preserve">
+    <value>مقادیر کمتر، رمزگذاری را سریع‌تر می‌کنند. مقادیر بیشتر، فایل‌های کوچک‌تری تولید می‌کنند. همهٔ مقادیر کیفیت تصویر را حفظ می‌کنند.</value>
+  </data>
+  <data name="TaskSettingsWindow_WebPLossless" xml:space="preserve">
+    <value>بدون افت کیفیت</value>
+  </data>
+  <data name="TaskSettingsWindow_WebPQuality" xml:space="preserve">
+    <value>کیفیت WebP:</value>
   </data>
   <data name="TaskSettingsWindow_Width" xml:space="preserve">
     <value>عرض:</value>

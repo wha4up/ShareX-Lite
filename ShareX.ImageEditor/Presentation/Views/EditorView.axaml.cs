@@ -582,6 +582,11 @@ namespace ShareX.ImageEditor.Presentation.Views
         {
             if (sender is MainViewModel vm)
             {
+                if (e.PropertyName == nameof(MainViewModel.IsSettingsPanelOpen) && vm.IsSettingsPanelOpen)
+                {
+                    EnsureBackgroundSettingsPanel();
+                }
+
                 if (e.PropertyName == nameof(MainViewModel.SelectedColor))
                 {
                     ApplySelectedColor(vm.SelectedColor);
@@ -629,22 +634,12 @@ namespace ShareX.ImageEditor.Presentation.Views
                 else if (e.PropertyName == nameof(MainViewModel.ActiveTool))
                 {
                     _editorCore.ActiveTool = vm.ActiveTool;
+                    _inputController.CancelClone();
+                    _inputController.CancelCrop();
 
                     if (vm.ActiveTool == EditorTool.Crop)
                     {
-                        if (vm.Options.QuickCrop)
-                        {
-                            _inputController.CancelCrop();
-                        }
-                        else
-                        {
-                            _inputController.ActivateCropToFullImage();
-                        }
                         this.Focus();
-                    }
-                    else
-                    {
-                        _inputController.CancelCrop();
                     }
                     _selectionController.ClearSelection();
                     UpdateCursorForTool(); // ISSUE-018 fix: Update cursor feedback for active tool
@@ -1033,7 +1028,7 @@ namespace ShareX.ImageEditor.Presentation.Views
                 }
             }
 
-            if (_inputController.CancelCrop())
+            if (_inputController.CancelClone() || _inputController.CancelCrop())
             {
                 return true;
             }
@@ -1312,7 +1307,7 @@ namespace ShareX.ImageEditor.Presentation.Views
             _inputController.OnKeyDown(sender ?? this, e);
 
             // Skip shortcuts when the user is typing in a text field
-            if (_parentWindow?.FocusManager?.GetFocusedElement() is TextBox) return;
+            if (e.Source is TextBox || _parentWindow?.FocusManager?.GetFocusedElement() is TextBox) return;
 
             // Skip shortcuts when a modal dialog is open (e.g. emoji picker search box)
             if (DataContext is MainViewModel { IsModalOpen: true }) return;
@@ -1498,7 +1493,7 @@ namespace ShareX.ImageEditor.Presentation.Views
             }
 
             // Skip shortcuts when the user is typing in a text field
-            if (_parentWindow?.FocusManager?.GetFocusedElement() is TextBox) return;
+            if (e.Source is TextBox || _parentWindow?.FocusManager?.GetFocusedElement() is TextBox) return;
 
             if (e.Key is Key.LeftCtrl or Key.RightCtrl && !_inputController.IsDrawingActive)
             {
@@ -1510,7 +1505,7 @@ namespace ShareX.ImageEditor.Presentation.Views
                 switch (e.Key)
                 {
                     case Key.Escape:
-                        if (_inputController.CancelCrop())
+                        if (_inputController.CancelClone() || _inputController.CancelCrop())
                         {
                             e.Handled = true;
                         }
@@ -1555,6 +1550,7 @@ namespace ShareX.ImageEditor.Presentation.Views
 
         private void OnDeselectRequested(object? sender, EventArgs e)
         {
+            _inputController.CancelClone();
             _inputController.CancelCrop();
             _selectionController.ClearSelection();
         }
@@ -1811,58 +1807,13 @@ namespace ShareX.ImageEditor.Presentation.Views
             }
         }
 
-        private async void OnBrowseBackgroundImageClick(object? sender, RoutedEventArgs e)
+        /// <summary>
+        /// Creates the background settings panel the first time the sidebar opens. The closed sidebar is only
+        /// collapsed to zero width, so building the panel up front would cost every editor and region capture.
+        /// </summary>
+        private void EnsureBackgroundSettingsPanel()
         {
-            if (DataContext is not MainViewModel vm)
-            {
-                return;
-            }
-
-            TopLevel? topLevel = TopLevel.GetTopLevel(this);
-            if (topLevel?.StorageProvider == null)
-            {
-                return;
-            }
-
-            IReadOnlyList<IStorageFile> files = await topLevel.StorageProvider.OpenFilePickerAsync(new FilePickerOpenOptions
-            {
-                Title = Strings.EditorView_SelectBackgroundImage,
-                AllowMultiple = false,
-                FileTypeFilter = [FilePickerFileTypes.ImageAll]
-            });
-
-            if (files.Count > 0)
-            {
-                vm.SetBackgroundImagePath(files[0].Path.LocalPath);
-            }
-        }
-
-        private void OnGradientColor1PreviewPointerPressed(object? sender, PointerPressedEventArgs e)
-        {
-            OpenBackgroundColorPicker(BackgroundGradientColor1Popup, BackgroundGradientColor2Popup, BackgroundColorPopup);
-            e.Handled = true;
-        }
-
-        private void OnGradientColor2PreviewPointerPressed(object? sender, PointerPressedEventArgs e)
-        {
-            OpenBackgroundColorPicker(BackgroundGradientColor2Popup, BackgroundGradientColor1Popup, BackgroundColorPopup);
-            e.Handled = true;
-        }
-
-        private void OnBackgroundColorPreviewPointerPressed(object? sender, PointerPressedEventArgs e)
-        {
-            OpenBackgroundColorPicker(BackgroundColorPopup, BackgroundGradientColor1Popup, BackgroundGradientColor2Popup);
-            e.Handled = true;
-        }
-
-        private static void OpenBackgroundColorPicker(Popup popupToOpen, params Popup[] popupsToClose)
-        {
-            foreach (Popup popupToClose in popupsToClose)
-            {
-                popupToClose.IsOpen = false;
-            }
-
-            popupToOpen.IsOpen = true;
+            BackgroundSettingsSidebar.Child ??= new BackgroundSettingsPanel();
         }
 
         private void OnNewImageRequested(object? sender, EventArgs e)

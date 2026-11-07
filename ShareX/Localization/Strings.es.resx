@@ -472,6 +472,18 @@
   <data name="ApplicationSettingsWindow_HotkeyRepeatLimit" xml:space="preserve">
     <value>Intervalo de repetición de atajos (milisegundos)</value>
   </data>
+  <data name="ApplicationSettingsWindow_IconPackLabel" xml:space="preserve">
+    <value>Paquete de iconos:</value>
+  </data>
+  <data name="ApplicationSettingsWindow_IconPackLegacy" xml:space="preserve">
+    <value>Clásico</value>
+  </data>
+  <data name="ApplicationSettingsWindow_IconPackModern" xml:space="preserve">
+    <value>Moderno</value>
+  </data>
+  <data name="ApplicationSettingsWindow_Icons" xml:space="preserve">
+    <value>Iconos</value>
+  </data>
   <data name="ApplicationSettingsWindow_ImagePrintSettings" xml:space="preserve">
     <value>Configuración de impresión de imagen...</value>
   </data>
@@ -626,7 +638,10 @@
     <value>Mostrar el visor de contenido del portapapeles</value>
   </data>
   <data name="ApplicationSettingsWindow_ShowEditWithShareXButtonInWindowsExplorerContextMenu" xml:space="preserve">
-    <value>Mostrar el botón "Editar con ShareX" en el menú contextual del Explorador de Windows</value>
+    <value>Mostrar el botón "Editar en el editor de imágenes de ShareX" en el menú contextual del Explorador de Windows</value>
+  </data>
+  <data name="ApplicationSettingsWindow_ShowEditWithShareXPhotoEditorButtonInWindowsExplorerContextMenu" xml:space="preserve">
+    <value>Mostrar el botón "Editar en el editor de fotos de ShareX" en el menú contextual del Explorador de Windows</value>
   </data>
   <data name="ApplicationSettingsWindow_ShowLargeFileSizeWarning" xml:space="preserve">
     <value>Umbral de aviso para archivos grandes (MB)</value>
@@ -1326,7 +1341,10 @@ Por favor seleccione una tecla de acceso directo diferente o salir de la aplicac
     <value>Could not write imagen to ruta:</value>
   </data>
   <data name="IntegrationHelpers_EditWithShareX" xml:space="preserve">
-    <value>Editar with ShareX</value>
+    <value>Editar en el editor de imágenes de ShareX</value>
+  </data>
+  <data name="IntegrationHelpers_EditWithShareXPhotoEditor" xml:space="preserve">
+    <value>Editar en el editor de fotos de ShareX</value>
   </data>
   <data name="IntegrationHelpers_UploadWithShareX" xml:space="preserve">
     <value>Subir with ShareX</value>
@@ -1520,6 +1538,9 @@ Por favor seleccione una tecla de acceso directo diferente o salir de la aplicac
   <data name="MainMenuBuilder_NetworkMonitor" xml:space="preserve">
     <value>Monitor de red...</value>
   </data>
+  <data name="MainMenuBuilder_NewBadge" xml:space="preserve">
+    <value>Nuevo</value>
+  </data>
   <data name="MainMenuBuilder_NoImageEffectPresets" xml:space="preserve">
     <value>No hay ajustes preestablecidos de efectos de imagen</value>
   </data>
@@ -1532,6 +1553,9 @@ Por favor seleccione una tecla de acceso directo diferente o salir de la aplicac
   <data name="MainMenuBuilder_Open" xml:space="preserve">
     <value>Abrir</value>
   </data>
+  <data name="MainMenuBuilder_PhotoEditor" xml:space="preserve">
+    <value>Editor de fotos</value>
+  </data>
   <data name="MainMenuBuilder_PinToScreenDialog" xml:space="preserve">
     <value>Anclar a la pantalla</value>
   </data>
@@ -1543,6 +1567,9 @@ Por favor seleccione una tecla de acceso directo diferente o salir de la aplicac
   </data>
   <data name="MainMenuBuilder_Region" xml:space="preserve">
     <value>Región...</value>
+  </data>
+  <data name="MainMenuBuilder_RegionTransparent" xml:space="preserve">
+    <value>Región (transparente)...</value>
   </data>
   <data name="MainMenuBuilder_RemoteStorageBrowser" xml:space="preserve">
     <value>Navegador de almacenamiento remoto...</value>
@@ -1579,6 +1606,9 @@ Por favor seleccione una tecla de acceso directo diferente o salir de la aplicac
   </data>
   <data name="MainMenuBuilder_ShowShareX" xml:space="preserve">
     <value>Mostrar ShareX</value>
+  </data>
+  <data name="MainMenuBuilder_Stats" xml:space="preserve">
+    <value>Estadísticas...</value>
   </data>
   <data name="MainMenuBuilder_TaskSettings" xml:space="preserve">
     <value>Configuración de la tarea</value>
@@ -1696,6 +1726,9 @@ Por favor seleccione una tecla de acceso directo diferente o salir de la aplicac
   </data>
   <data name="MainWindow_EditImage" xml:space="preserve">
     <value>Editar imagen</value>
+  </data>
+  <data name="MainWindow_EditImageInPhotoEditor" xml:space="preserve">
+    <value>Editar en el editor de fotos...</value>
   </data>
   <data name="MainWindow_File" xml:space="preserve">
     <value>Archivo</value>
@@ -2276,6 +2309,9 @@ Do you want to abort the active grabación de pantalla?</value>
   <data name="TaskSettingsWindow_CloseOCRWindowAfterOpeningServiceLink" xml:space="preserve">
     <value>Cerrar la ventana de OCR después de abrir el enlace del servicio</value>
   </data>
+  <data name="TaskSettingsWindow_CompactRegionCaptureToolbar" xml:space="preserve">
+    <value>Barra de herramientas compacta de captura de región</value>
+  </data>
   <data name="TaskSettingsWindow_ConfigureWithEllipsis" xml:space="preserve">
     <value>Configurar...</value>
   </data>
@@ -2305,6 +2341,9 @@ Do you want to abort the active grabación de pantalla?</value>
   </data>
   <data name="TaskSettingsWindow_DetectWindowRegions" xml:space="preserve">
     <value>Detectar regiones de ventana</value>
+  </data>
+  <data name="TaskSettingsWindow_DimHoveredWindowsAndControls" xml:space="preserve">
+    <value>Oscurecer las ventanas y controles bajo el cursor</value>
   </data>
   <data name="TaskSettingsWindow_DisableToastNotificationsOnFullscreen" xml:space="preserve">
     <value>Desactivar notificaciones emergentes en pantalla completa</value>
@@ -2497,6 +2536,9 @@ Do you want to abort the active grabación de pantalla?</value>
   </data>
   <data name="TaskSettingsWindow_MoveUp" xml:space="preserve">
     <value>Subir</value>
+  </data>
+  <data name="TaskSettingsWindow_MultiRegionMode" xml:space="preserve">
+    <value>Modo de varias regiones</value>
   </data>
   <data name="TaskSettingsWindow_Name" xml:space="preserve">
     <value>Nombre</value>
@@ -2992,6 +3034,18 @@ Do you want to abort the active grabación de pantalla?</value>
   </data>
   <data name="TaskSettingsWindow_WaveAudio" xml:space="preserve">
     <value>Audio Wave</value>
+  </data>
+  <data name="TaskSettingsWindow_WebPCompressionEffort" xml:space="preserve">
+    <value>Esfuerzo de compresión WebP:</value>
+  </data>
+  <data name="TaskSettingsWindow_WebPCompressionEffortHint" xml:space="preserve">
+    <value>Los valores más bajos codifican más rápido. Los valores más altos producen archivos más pequeños. Todos los valores conservan la calidad de la imagen.</value>
+  </data>
+  <data name="TaskSettingsWindow_WebPLossless" xml:space="preserve">
+    <value>Sin pérdidas</value>
+  </data>
+  <data name="TaskSettingsWindow_WebPQuality" xml:space="preserve">
+    <value>Calidad WebP:</value>
   </data>
   <data name="TaskSettingsWindow_Width" xml:space="preserve">
     <value>Anchura:</value>

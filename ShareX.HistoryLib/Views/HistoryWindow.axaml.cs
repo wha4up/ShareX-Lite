@@ -88,6 +88,7 @@ public partial class HistoryWindow : Window
             RoutingStrategies.Bubble, handledEventsToo: true);
         HistoryList.AddHandler(PointerReleasedEvent, OnHistoryPointerReleased,
             RoutingStrategies.Bubble, handledEventsToo: true);
+        HistoryList.AddHandler(KeyDownEvent, OnHistoryListKeyDown, RoutingStrategies.Tunnel);
         _filterTimer = new DispatcherTimer { Interval = TimeSpan.FromMilliseconds(220) };
         _filterTimer.Tick += OnFilterTimerTick;
     }
@@ -1018,12 +1019,14 @@ public partial class HistoryWindow : Window
             if (ReferenceEquals(_filteredHistoryItems[i], item)) selectedIndex = files.Count;
             files.Add(path);
         }
-        if (_services.ShowImages != null) _services.ShowImages(files, selectedIndex);
-        else _services.ShowImage?.Invoke(item.FilePath);
+        if (_services.ShowImages != null) _services.ShowImages(files, selectedIndex, this);
+        else _services.ShowImage?.Invoke(item.FilePath, this);
     }
 
     private void OnUploadFileClick(object? sender, RoutedEventArgs e) => InvokeFileService(_services.UploadFile, false);
     private void OnEditImageClick(object? sender, RoutedEventArgs e) => InvokeFileService(_services.EditImage, true);
+
+    private void OnEditImageInPhotoEditorClick(object? sender, RoutedEventArgs e) => InvokeFileService(_services.EditImageInPhotoEditor, true);
     private void OnTrimVideoClick(object? sender, RoutedEventArgs e)
     {
         HistoryItem[] items = GetSelectedItems();

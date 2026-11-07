@@ -472,6 +472,18 @@
   <data name="ApplicationSettingsWindow_HotkeyRepeatLimit" xml:space="preserve">
     <value>Interval de repetare a tastelor rapide (milisecunde)</value>
   </data>
+  <data name="ApplicationSettingsWindow_IconPackLabel" xml:space="preserve">
+    <value>Pachet de pictograme:</value>
+  </data>
+  <data name="ApplicationSettingsWindow_IconPackLegacy" xml:space="preserve">
+    <value>Clasic</value>
+  </data>
+  <data name="ApplicationSettingsWindow_IconPackModern" xml:space="preserve">
+    <value>Modern</value>
+  </data>
+  <data name="ApplicationSettingsWindow_Icons" xml:space="preserve">
+    <value>Pictograme</value>
+  </data>
   <data name="ApplicationSettingsWindow_ImagePrintSettings" xml:space="preserve">
     <value>Setări de imprimare a imaginii...</value>
   </data>
@@ -626,7 +638,10 @@
     <value>Afișează vizualizatorul conținutului din clipboard</value>
   </data>
   <data name="ApplicationSettingsWindow_ShowEditWithShareXButtonInWindowsExplorerContextMenu" xml:space="preserve">
-    <value>Afișați butonul "Editați cu ShareX" în meniul contextual al Windows Explorer</value>
+    <value>Afișați butonul "Editați în editorul de imagini ShareX" în meniul contextual al Windows Explorer</value>
+  </data>
+  <data name="ApplicationSettingsWindow_ShowEditWithShareXPhotoEditorButtonInWindowsExplorerContextMenu" xml:space="preserve">
+    <value>Afișați butonul "Editați în editorul foto ShareX" în meniul contextual al Windows Explorer</value>
   </data>
   <data name="ApplicationSettingsWindow_ShowLargeFileSizeWarning" xml:space="preserve">
     <value>Prag de avertizare pentru fișiere mari (MB)</value>
@@ -1326,7 +1341,10 @@ Vă rugăm să selectați o altă tastatură rapidă sau să ieșiți din aplica
     <value>Nu s-a putut scrie imaginea în calea:</value>
   </data>
   <data name="IntegrationHelpers_EditWithShareX" xml:space="preserve">
-    <value>Editați cu ShareX</value>
+    <value>Editați în editorul de imagini ShareX</value>
+  </data>
+  <data name="IntegrationHelpers_EditWithShareXPhotoEditor" xml:space="preserve">
+    <value>Editați în editorul foto ShareX</value>
   </data>
   <data name="IntegrationHelpers_UploadWithShareX" xml:space="preserve">
     <value>Încărcați cu ShareX</value>
@@ -1520,6 +1538,9 @@ Vă rugăm să selectați o altă tastatură rapidă sau să ieșiți din aplica
   <data name="MainMenuBuilder_NetworkMonitor" xml:space="preserve">
     <value>Monitor de rețea...</value>
   </data>
+  <data name="MainMenuBuilder_NewBadge" xml:space="preserve">
+    <value>Nou</value>
+  </data>
   <data name="MainMenuBuilder_NoImageEffectPresets" xml:space="preserve">
     <value>Nicio presetare pentru efecte de imagine</value>
   </data>
@@ -1532,6 +1553,9 @@ Vă rugăm să selectați o altă tastatură rapidă sau să ieșiți din aplica
   <data name="MainMenuBuilder_Open" xml:space="preserve">
     <value>Deschide</value>
   </data>
+  <data name="MainMenuBuilder_PhotoEditor" xml:space="preserve">
+    <value>Editor foto</value>
+  </data>
   <data name="MainMenuBuilder_PinToScreenDialog" xml:space="preserve">
     <value>Fixează pe ecran</value>
   </data>
@@ -1543,6 +1567,9 @@ Vă rugăm să selectați o altă tastatură rapidă sau să ieșiți din aplica
   </data>
   <data name="MainMenuBuilder_Region" xml:space="preserve">
     <value>Regiune...</value>
+  </data>
+  <data name="MainMenuBuilder_RegionTransparent" xml:space="preserve">
+    <value>Regiune (transparentă)...</value>
   </data>
   <data name="MainMenuBuilder_RemoteStorageBrowser" xml:space="preserve">
     <value>Browser de stocare la distanță...</value>
@@ -1579,6 +1606,9 @@ Vă rugăm să selectați o altă tastatură rapidă sau să ieșiți din aplica
   </data>
   <data name="MainMenuBuilder_ShowShareX" xml:space="preserve">
     <value>Afișează ShareX</value>
+  </data>
+  <data name="MainMenuBuilder_Stats" xml:space="preserve">
+    <value>Statistici...</value>
   </data>
   <data name="MainMenuBuilder_TaskSettings" xml:space="preserve">
     <value>Setări sarcină</value>
@@ -1696,6 +1726,9 @@ Vă rugăm să selectați o altă tastatură rapidă sau să ieșiți din aplica
   </data>
   <data name="MainWindow_EditImage" xml:space="preserve">
     <value>Editați imaginea</value>
+  </data>
+  <data name="MainWindow_EditImageInPhotoEditor" xml:space="preserve">
+    <value>Editați în editorul foto...</value>
   </data>
   <data name="MainWindow_File" xml:space="preserve">
     <value>Fișier</value>
@@ -2276,6 +2309,9 @@ Vrei să anulezi înregistrarea activă a ecranului?</value>
   <data name="TaskSettingsWindow_CloseOCRWindowAfterOpeningServiceLink" xml:space="preserve">
     <value>Închide fereastra OCR după deschiderea legăturii serviciului</value>
   </data>
+  <data name="TaskSettingsWindow_CompactRegionCaptureToolbar" xml:space="preserve">
+    <value>Bară de instrumente compactă pentru captura regiunii</value>
+  </data>
   <data name="TaskSettingsWindow_ConfigureWithEllipsis" xml:space="preserve">
     <value>Configurează...</value>
   </data>
@@ -2305,6 +2341,9 @@ Vrei să anulezi înregistrarea activă a ecranului?</value>
   </data>
   <data name="TaskSettingsWindow_DetectWindowRegions" xml:space="preserve">
     <value>Detectează regiunile ferestrelor</value>
+  </data>
+  <data name="TaskSettingsWindow_DimHoveredWindowsAndControls" xml:space="preserve">
+    <value>Întunecă ferestrele și controalele de sub cursor</value>
   </data>
   <data name="TaskSettingsWindow_DisableToastNotificationsOnFullscreen" xml:space="preserve">
     <value>Dezactivează notificările pe ecran complet</value>
@@ -2497,6 +2536,9 @@ Vrei să anulezi înregistrarea activă a ecranului?</value>
   </data>
   <data name="TaskSettingsWindow_MoveUp" xml:space="preserve">
     <value>Mută în sus</value>
+  </data>
+  <data name="TaskSettingsWindow_MultiRegionMode" xml:space="preserve">
+    <value>Mod multi-regiune</value>
   </data>
   <data name="TaskSettingsWindow_Name" xml:space="preserve">
     <value>Nume</value>
@@ -2992,6 +3034,18 @@ Vrei să anulezi înregistrarea activă a ecranului?</value>
   </data>
   <data name="TaskSettingsWindow_WaveAudio" xml:space="preserve">
     <value>Audio Wave</value>
+  </data>
+  <data name="TaskSettingsWindow_WebPCompressionEffort" xml:space="preserve">
+    <value>Efort de compresie WebP:</value>
+  </data>
+  <data name="TaskSettingsWindow_WebPCompressionEffortHint" xml:space="preserve">
+    <value>Valorile mai mici accelerează codificarea. Valorile mai mari produc fișiere mai mici. Toate valorile păstrează calitatea imaginii.</value>
+  </data>
+  <data name="TaskSettingsWindow_WebPLossless" xml:space="preserve">
+    <value>Fără pierderi</value>
+  </data>
+  <data name="TaskSettingsWindow_WebPQuality" xml:space="preserve">
+    <value>Calitate WebP:</value>
   </data>
   <data name="TaskSettingsWindow_Width" xml:space="preserve">
     <value>Lățime:</value>

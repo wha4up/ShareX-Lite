@@ -83,7 +83,7 @@
     <value>Datei in Zwischenablage kopieren</value>
   </data>
   <data name="AfterCaptureTasks_CopyFolderPathToClipboard" xml:space="preserve">
-    <value>Ordnerpfad in die Zwischenablage kopieren</value>
+    <value>Ordnerpfad in Zwischenablage kopieren</value>
   </data>
   <data name="AfterCaptureTasks_CopyImageToClipboard" xml:space="preserve">
     <value>Bild in Zwischenablage kopieren</value>
@@ -94,6 +94,9 @@
   <data name="AfterCaptureTasks_DoOCR" xml:space="preserve">
     <value>Text erkennen (OCR)</value>
   </data>
+  <data name="AfterCaptureTasks_OpenInPhotoEditor" xml:space="preserve">
+    <value>Im Fotoeditor öffnen</value>
+  </data>
   <data name="AfterCaptureTasks_PerformActions" xml:space="preserve">
     <value>Aktion ausführen</value>
   </data>
@@ -101,13 +104,13 @@
     <value>An Bildschirm anheften</value>
   </data>
   <data name="AfterCaptureTasks_SaveImageToFile" xml:space="preserve">
-    <value>Bild zu Datei speichern</value>
+    <value>Bild in Datei speichern</value>
   </data>
   <data name="AfterCaptureTasks_SaveImageToFileWithDialog" xml:space="preserve">
-    <value>Bild zu Datei speichern als...</value>
+    <value>Bild in Datei speichern als...</value>
   </data>
   <data name="AfterCaptureTasks_SaveThumbnailImageToFile" xml:space="preserve">
-    <value>Thumbnailbild zu Datei speichern</value>
+    <value>Thumbnail in Datei speichern</value>
   </data>
   <data name="AfterCaptureTasks_ScanQRCode" xml:space="preserve">
     <value>QR-Code scannen</value>
@@ -753,6 +756,9 @@ Möchten Sie es dennoch ausführen?</value>
   <data name="HotkeyType_PauseScreenRecording" xml:space="preserve">
     <value>Bildschirmaufnahme pausieren</value>
   </data>
+  <data name="HotkeyType_PhotoEditor" xml:space="preserve">
+    <value>Fotoeditor</value>
+  </data>
   <data name="HotkeyType_PinToScreen" xml:space="preserve">
     <value>An Bildschirm anheften</value>
   </data>
@@ -782,6 +788,9 @@ Möchten Sie es dennoch ausführen?</value>
   </data>
   <data name="HotkeyType_RectangleRegion" xml:space="preserve">
     <value>Bereich aufnehmen</value>
+  </data>
+  <data name="HotkeyType_RectangleTransparent" xml:space="preserve">
+    <value>Bereich aufnehmen (Transparent)</value>
   </data>
   <data name="HotkeyType_Ruler" xml:space="preserve">
     <value>Lineal</value>
