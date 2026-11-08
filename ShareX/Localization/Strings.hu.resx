@@ -157,6 +157,9 @@
   <data name="AfterCaptureWindow_AfterUpload" xml:space="preserve">
     <value>Feltöltés után</value>
   </data>
+  <data name="AfterCaptureWindow_AlsoHeading" xml:space="preserve">
+    <value>Továbbá</value>
+  </data>
   <data name="AfterCaptureWindow_Cancel" xml:space="preserve">
     <value>Mégse</value>
   </data>
@@ -178,11 +181,56 @@
   <data name="AfterCaptureWindow_FileName" xml:space="preserve">
     <value>Fájlnév</value>
   </data>
+  <data name="AfterCaptureWindow_GoalCopyFile" xml:space="preserve">
+    <value>Fájl másolása</value>
+  </data>
+  <data name="AfterCaptureWindow_GoalCopyFileDescription" xml:space="preserve">
+    <value>A mentett fájlt a vágólapra helyezi.</value>
+  </data>
+  <data name="AfterCaptureWindow_GoalCopyFilePath" xml:space="preserve">
+    <value>Fájl elérési útjának másolása</value>
+  </data>
+  <data name="AfterCaptureWindow_GoalCopyFilePathDescription" xml:space="preserve">
+    <value>A mentett fájl elérési útját másolja.</value>
+  </data>
+  <data name="AfterCaptureWindow_GoalCopyFolderPath" xml:space="preserve">
+    <value>Mappa elérési útjának másolása</value>
+  </data>
+  <data name="AfterCaptureWindow_GoalCopyFolderPathDescription" xml:space="preserve">
+    <value>A mentett fájl mappáját másolja.</value>
+  </data>
+  <data name="AfterCaptureWindow_GoalCopyImage" xml:space="preserve">
+    <value>Kép másolása</value>
+  </data>
+  <data name="AfterCaptureWindow_GoalCopyImageDescription" xml:space="preserve">
+    <value>A képet a vágólapra helyezi.</value>
+  </data>
+  <data name="AfterCaptureWindow_GoalCopyUrl" xml:space="preserve">
+    <value>URL másolása</value>
+  </data>
+  <data name="AfterCaptureWindow_GoalCopyUrlDescription" xml:space="preserve">
+    <value>Feltölti, majd másolja a hivatkozást.</value>
+  </data>
+  <data name="AfterCaptureWindow_GoalDescription" xml:space="preserve">
+    <value>A szükséges lépések a céljából következnek. Adjon hozzá tetszőleges extrákat.</value>
+  </data>
+  <data name="AfterCaptureWindow_GoalHeading" xml:space="preserve">
+    <value>Mit szeretne a vágólapra tenni?</value>
+  </data>
+  <data name="AfterCaptureWindow_GoalLeaveClipboard" xml:space="preserve">
+    <value>Vágólap érintetlenül hagyása</value>
+  </data>
+  <data name="AfterCaptureWindow_GoalLeaveClipboardDescription" xml:space="preserve">
+    <value>Nem másol és nem tölt fel semmit.</value>
+  </data>
   <data name="AfterCaptureWindow_Heading" xml:space="preserve">
     <value>Rögzítés után</value>
   </data>
   <data name="AfterCaptureWindow_NoPreview" xml:space="preserve">
     <value>Nincs elérhető képelőnézet</value>
+  </data>
+  <data name="AfterCaptureWindow_RequiredHeading" xml:space="preserve">
+    <value>Ehhez a célhoz szükséges</value>
   </data>
   <data name="AfterCaptureWindow_Subtitle" xml:space="preserve">
     <value>Tekintse át a rögzített tartalmat, és válassza ki a következő lépést.</value>
@@ -358,6 +406,9 @@
   <data name="ApplicationSettingsWindow_ClipboardFormats" xml:space="preserve">
     <value>Vágólap-formátumok</value>
   </data>
+  <data name="ApplicationSettingsWindow_CompactMode" xml:space="preserve">
+    <value>Kompakt mód</value>
+  </data>
   <data name="ApplicationSettingsWindow_CustomHotkeysConfigPath" xml:space="preserve">
     <value>Gyorsbillentyű-konfiguráció egyéni elérési útja</value>
   </data>
@@ -484,6 +535,9 @@
   <data name="ApplicationSettingsWindow_Icons" xml:space="preserve">
     <value>Ikonok</value>
   </data>
+  <data name="ApplicationSettingsWindow_ImagePreviewLabel" xml:space="preserve">
+    <value>Kép előnézet láthatósága:</value>
+  </data>
   <data name="ApplicationSettingsWindow_ImagePrintSettings" xml:space="preserve">
     <value>Kép nyomtatási beállítások...</value>
   </data>
@@ -516,6 +570,9 @@
   </data>
   <data name="ApplicationSettingsWindow_Light" xml:space="preserve">
     <value>Világos</value>
+  </data>
+  <data name="ApplicationSettingsWindow_ListView" xml:space="preserve">
+    <value>Listanézet</value>
   </data>
   <data name="ApplicationSettingsWindow_MainWindow" xml:space="preserve">
     <value>Főablak</value>
@@ -637,11 +694,17 @@
   <data name="ApplicationSettingsWindow_ShowClipboardContentViewer" xml:space="preserve">
     <value>A vágólap tartalommegjelenítőjének megjelenítése</value>
   </data>
+  <data name="ApplicationSettingsWindow_ShowColumns" xml:space="preserve">
+    <value>Oszlopok megjelenítése</value>
+  </data>
   <data name="ApplicationSettingsWindow_ShowEditWithShareXButtonInWindowsExplorerContextMenu" xml:space="preserve">
     <value>"Szerkesztés a ShareX képszerkesztőben" gomb megjelenítése a Windows Intéző helyi menüjében</value>
   </data>
   <data name="ApplicationSettingsWindow_ShowEditWithShareXPhotoEditorButtonInWindowsExplorerContextMenu" xml:space="preserve">
     <value>"Szerkesztés a ShareX fotószerkesztőben" gomb megjelenítése a Windows Intéző helyi menüjében</value>
+  </data>
+  <data name="ApplicationSettingsWindow_ShowFileDeleteConfirmation" xml:space="preserve">
+    <value>Megerősítés kérése fájlok törlése előtt</value>
   </data>
   <data name="ApplicationSettingsWindow_ShowLargeFileSizeWarning" xml:space="preserve">
     <value>Nagy fájlok figyelmeztetési küszöbe (MB)</value>
@@ -679,6 +742,39 @@
   <data name="ApplicationSettingsWindow_SimultaneousUploadLimitLabel" xml:space="preserve">
     <value>Egyidejű feltöltési limit:</value>
   </data>
+  <data name="ApplicationSettingsWindow_Spacing" xml:space="preserve">
+    <value>Térköz</value>
+  </data>
+  <data name="ApplicationSettingsWindow_SpacingCompact" xml:space="preserve">
+    <value>Kompakt</value>
+  </data>
+  <data name="ApplicationSettingsWindow_SpacingDefault" xml:space="preserve">
+    <value>Alapértelmezett</value>
+  </data>
+  <data name="ApplicationSettingsWindow_SpacingMenus" xml:space="preserve">
+    <value>Menük</value>
+  </data>
+  <data name="ApplicationSettingsWindow_SpacingMenusLabel" xml:space="preserve">
+    <value>Menük:</value>
+  </data>
+  <data name="ApplicationSettingsWindow_SpacingPreviewLabel" xml:space="preserve">
+    <value>Előnézet:</value>
+  </data>
+  <data name="ApplicationSettingsWindow_SpacingSettingsWindowsLabel" xml:space="preserve">
+    <value>Beállítási ablakok:</value>
+  </data>
+  <data name="ApplicationSettingsWindow_SpacingSidebar" xml:space="preserve">
+    <value>Oldalsáv</value>
+  </data>
+  <data name="ApplicationSettingsWindow_SpacingSidebarLabel" xml:space="preserve">
+    <value>Oldalsáv:</value>
+  </data>
+  <data name="ApplicationSettingsWindow_SpacingToolMenus" xml:space="preserve">
+    <value>Eszközmenük</value>
+  </data>
+  <data name="ApplicationSettingsWindow_SpacingToolMenusLabel" xml:space="preserve">
+    <value>Eszközmenük:</value>
+  </data>
   <data name="ApplicationSettingsWindow_Steam" xml:space="preserve">
     <value>Steam</value>
   </data>
@@ -687,6 +783,9 @@
   </data>
   <data name="ApplicationSettingsWindow_SubFolderPatternLabel" xml:space="preserve">
     <value>Almappa sablon:</value>
+  </data>
+  <data name="ApplicationSettingsWindow_TaskViewModeLabel" xml:space="preserve">
+    <value>Feladatnézet mód:</value>
   </data>
   <data name="ApplicationSettingsWindow_Theme" xml:space="preserve">
     <value>Téma</value>
@@ -1228,6 +1327,9 @@
   <data name="FailedToSaveSettings" xml:space="preserve">
     <value>Failed to mentés beállítások</value>
   </data>
+  <data name="FileDeleteConfirmation_DontRemindAgain" xml:space="preserve">
+    <value>Ne emlékeztessen újra</value>
+  </data>
   <data name="FileExistWindow_Cancel" xml:space="preserve">
     <value>Mégse</value>
   </data>
@@ -1337,6 +1439,21 @@ Kérlek, válassz egy másik gyorsbillentyűt vagy zárd be a problémát okozó
   <data name="HotkeySettingsWindow_WindowTitle" xml:space="preserve">
     <value>ShareX - Gyorsbillentyű-beállítások</value>
   </data>
+  <data name="IconPackPrompt_ChangeLater" xml:space="preserve">
+    <value>Ezt bármikor módosíthatja az alkalmazás beállításaiban.</value>
+  </data>
+  <data name="IconPackPrompt_LegacyDescription" xml:space="preserve">
+    <value>A ShareX 21 színes ikonjai.</value>
+  </data>
+  <data name="IconPackPrompt_ModernDescription" xml:space="preserve">
+    <value>Letisztult vonalas ikonok, amelyek a téma színeit követik.</value>
+  </data>
+  <data name="IconPackPrompt_Subtitle" xml:space="preserve">
+    <value>A ShareX új ikonokat kapott. Válassza ki az Önnek tetsző megjelenést.</value>
+  </data>
+  <data name="IconPackPrompt_Title" xml:space="preserve">
+    <value>Válassza ki az ikonokat</value>
+  </data>
   <data name="ImageData_Write_Error_Message" xml:space="preserve">
     <value>Could not write kép to elérési út:</value>
   </data>
@@ -1414,6 +1531,9 @@ Kérlek, válassz egy másik gyorsbillentyűt vagy zárd be a problémát okozó
   </data>
   <data name="MainMenuBuilder_Capture" xml:space="preserve">
     <value>Rögzítés</value>
+  </data>
+  <data name="MainMenuBuilder_ClassicRuler" xml:space="preserve">
+    <value>Vonalzó</value>
   </data>
   <data name="MainMenuBuilder_ClipboardViewer" xml:space="preserve">
     <value>Vágólap viewer</value>
@@ -1578,7 +1698,7 @@ Kérlek, válassz egy másik gyorsbillentyűt vagy zárd be a problémát okozó
     <value>Újraindítás rendszergazdaként</value>
   </data>
   <data name="MainMenuBuilder_Ruler" xml:space="preserve">
-    <value>Vonalzó</value>
+    <value>Mérés</value>
   </data>
   <data name="MainMenuBuilder_ScreenColorPicker" xml:space="preserve">
     <value>Színszedő</value>
@@ -1588,6 +1708,9 @@ Kérlek, válassz egy másik gyorsbillentyűt vagy zárd be a problémát okozó
   </data>
   <data name="MainMenuBuilder_ScreenRecordingGif" xml:space="preserve">
     <value>Képernyőfelvétel (GIF)...</value>
+  </data>
+  <data name="MainMenuBuilder_ScreenshotDelayJustOnce" xml:space="preserve">
+    <value>Csak egyszer</value>
   </data>
   <data name="MainMenuBuilder_ScreenshotsFolder" xml:space="preserve">
     <value>Képernyőképek mappája...</value>
@@ -1693,6 +1816,9 @@ Kérlek, válassz egy másik gyorsbillentyűt vagy zárd be a problémát okozó
   </data>
   <data name="MainWindow_BeautifyImage" xml:space="preserve">
     <value>Beautify kép</value>
+  </data>
+  <data name="MainWindow_ClearTaskList" xml:space="preserve">
+    <value>Lista törlése</value>
   </data>
   <data name="MainWindow_ClearThumbnailView" xml:space="preserve">
     <value>Miniatűrnézet törlése</value>
@@ -1855,6 +1981,12 @@ Kérlek, válassz egy másik gyorsbillentyűt vagy zárd be a problémát okozó
   </data>
   <data name="MainWindow_StopUpload" xml:space="preserve">
     <value>Feltöltés leállítása</value>
+  </data>
+  <data name="MainWindow_SwitchToListView" xml:space="preserve">
+    <value>Váltás listanézetre</value>
+  </data>
+  <data name="MainWindow_SwitchToThumbnailView" xml:space="preserve">
+    <value>Váltás miniatűr nézetre</value>
   </data>
   <data name="MainWindow_Text" xml:space="preserve">
     <value>Szöveg</value>
@@ -2156,6 +2288,33 @@ Do you want to megszakítás the active képernyőfelvétel?</value>
   <data name="TaskHelpers_ToggleHotkeys_Hotkeys_enabled_" xml:space="preserve">
     <value>Gyorsbillentyűk engedélyezve.</value>
   </data>
+  <data name="TaskListView_Elapsed" xml:space="preserve">
+    <value>Eltelt</value>
+  </data>
+  <data name="TaskListView_Filename" xml:space="preserve">
+    <value>Fájlnév</value>
+  </data>
+  <data name="TaskListView_History" xml:space="preserve">
+    <value>Előzmények</value>
+  </data>
+  <data name="TaskListView_InQueue" xml:space="preserve">
+    <value>Várakozik</value>
+  </data>
+  <data name="TaskListView_Progress" xml:space="preserve">
+    <value>Folyamat</value>
+  </data>
+  <data name="TaskListView_Remaining" xml:space="preserve">
+    <value>Hátralévő</value>
+  </data>
+  <data name="TaskListView_Speed" xml:space="preserve">
+    <value>Sebesség</value>
+  </data>
+  <data name="TaskListView_Status" xml:space="preserve">
+    <value>Állapot</value>
+  </data>
+  <data name="TaskListView_URL" xml:space="preserve">
+    <value>URL</value>
+  </data>
   <data name="TaskManager_UploadCompletedURL" xml:space="preserve">
     <value>A feltöltés befejeződött. URL: {0}</value>
   </data>
@@ -2231,6 +2390,9 @@ Do you want to megszakítás the active képernyőfelvétel?</value>
   <data name="TaskSettingsWindow_AutoCopyImageToClipboard" xml:space="preserve">
     <value>Kép automatikus másolása a vágólapra</value>
   </data>
+  <data name="TaskSettingsWindow_AutoExpandCanvas" xml:space="preserve">
+    <value>A vászon automatikus bővítése, ha a szöveg vagy az alakzatok túllógnak a szélén</value>
+  </data>
   <data name="TaskSettingsWindow_AutoIncrementNumber" xml:space="preserve">
     <value>Automatikusan növekvő szám:</value>
   </data>
@@ -2263,6 +2425,9 @@ Do you want to megszakítás the active képernyőfelvétel?</value>
   </data>
   <data name="TaskSettingsWindow_Cancel" xml:space="preserve">
     <value>Mégse</value>
+  </data>
+  <data name="TaskSettingsWindow_CanvasFillColor" xml:space="preserve">
+    <value>A hozzáadott vászonterület kitöltőszíne:</value>
   </data>
   <data name="TaskSettingsWindow_Capture" xml:space="preserve">
     <value>Rögzítés</value>
@@ -2608,6 +2773,9 @@ Do you want to megszakítás the active képernyőfelvétel?</value>
   </data>
   <data name="TaskSettingsWindow_NativeRecorderEnabled" xml:space="preserve">
     <value>A beépített képernyőrögzítő használata</value>
+  </data>
+  <data name="TaskSettingsWindow_NativeRecorderHDRToneMapping" xml:space="preserve">
+    <value>HDR tónusleképezés</value>
   </data>
   <data name="TaskSettingsWindow_NativeRecorderHardware" xml:space="preserve">
     <value>Hardveres videókódolás megkövetelése</value>

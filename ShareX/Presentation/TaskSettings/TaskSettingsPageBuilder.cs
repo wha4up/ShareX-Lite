@@ -563,12 +563,11 @@ internal sealed class TaskSettingsPageBuilder
             Strings.TaskSettingsWindow_NativeRecorderDefaultMicrophone, Strings.TaskSettingsWindow_NativeRecorderUnavailableMicrophone);
         BindEnabled(microphones, recordMicrophone);
         Control microphoneDevice = Row(Strings.TaskSettingsWindow_NativeRecorderMicrophoneDevice, microphones);
-        Control showBar = Check(Strings.ScreenRecorderBar_ShowBeforeRecording, () => capture.ScreenRecordShowBar, value => capture.ScreenRecordShowBar = value);
-        BindEnabled(showBar, native);
         Control hardware = Check(Strings.TaskSettingsWindow_NativeRecorderHardware, () => capture.ScreenRecordRequireHardwareEncoder, value => capture.ScreenRecordRequireHardwareEncoder = value);
         NumericUpDown bitrateControl = Number(() => capture.ScreenRecordVideoBitrate, value => capture.ScreenRecordVideoBitrate = (int)value, 100, 200000, 100);
         bitrateControl.Width = 160;
         Control bitrate = Row(Strings.TaskSettingsWindow_NativeRecorderBitrate, bitrateControl);
+        Control hdrToneMapping = Check(Strings.TaskSettingsWindow_NativeRecorderHDRToneMapping, () => capture.ScreenRecordHDRToneMapping, value => capture.ScreenRecordHDRToneMapping = value);
         BoundValue<bool> recordCamera = new(capture.ScreenRecordCamera, value => capture.ScreenRecordCamera = value);
         Control cameraEnabled = Check(Strings.TaskSettingsWindow_NativeRecorderCamera_Enabled, recordCamera);
         ComboBox cameras = CaptureDeviceCombo(() => CameraCaptureDevices.GetCameras().Select(device => (device.Id, device.Name)).ToArray(),
@@ -612,7 +611,7 @@ internal sealed class TaskSettingsPageBuilder
         Control cameraPanel = EnabledCard(_captureOverride, Strings.TaskSettingsWindow_NativeRecorderCamera, cameraContent);
         Control twoPass = Check(Strings.TaskSettingsWindow_RecordLosslesslyFirstThenApplyEncodingOptions, () => capture.ScreenRecordTwoPassEncoding, value => capture.ScreenRecordTwoPassEncoding = value);
         Control legacyOptions = Button(Strings.TaskSettingsWindow_ScreenRecordingOptionsWithEllipsis, ShowScreenRecordingOptions);
-        foreach (Control control in new[] { systemAudio, systemAudioDevice, microphone, microphoneDevice, hardware, bitrate }) BindEnabled(control, native);
+        foreach (Control control in new[] { systemAudio, systemAudioDevice, microphone, microphoneDevice, hardware, bitrate, hdrToneMapping }) BindEnabled(control, native);
         BindEnabled(twoPass, native, invert: true);
         BindEnabled(legacyOptions, native, invert: true);
         BoundValue<bool> fixedDuration = new(capture.ScreenRecordFixedDuration, value => capture.ScreenRecordFixedDuration = value);
@@ -626,9 +625,10 @@ internal sealed class TaskSettingsPageBuilder
         return Page("capture-screen-recorder", Strings.TaskSettingsWindow_ScreenRecorder, AppIcons.Video,
             EnabledCard(_captureOverride, Strings.TaskSettingsWindow_NativeRecorder,
                 Check(Strings.TaskSettingsWindow_NativeRecorderEnabled, native),
-                showBar, systemAudio, systemAudioDevice, microphone, microphoneDevice, hardware, bitrate),
+                systemAudio, systemAudioDevice, microphone, microphoneDevice, hardware, bitrate, hdrToneMapping),
             cameraPanel,
             EnabledCard(_captureOverride, Strings.TaskSettingsWindow_Recording,
+                Check(Strings.ScreenRecorderBar_ShowBeforeRecording, () => capture.ScreenRecordShowBar, value => capture.ScreenRecordShowBar = value),
                 Row(Strings.TaskSettingsWindow_ScreenRecordingFPS, Number(() => capture.ScreenRecordFPS, value => capture.ScreenRecordFPS = (int)value, 1, 120)),
                 Row(Strings.TaskSettingsWindow_GIFFPS, Number(() => capture.GIFFPS, value => capture.GIFFPS = (int)value, 1, HelpersOptions.DevMode ? 60 : 30)),
                 Check(Strings.TaskSettingsWindow_ShowCursorInRecording, () => capture.ScreenRecordShowCursor, value => capture.ScreenRecordShowCursor = value),
@@ -942,6 +942,8 @@ internal sealed class TaskSettingsPageBuilder
                 Check(Strings.TaskSettingsWindow_AutoCloseEditorOnTask, () => options.AutoCloseEditorOnTask, value => options.AutoCloseEditorOnTask = value),
                 Check(Strings.TaskSettingsWindow_AutoCopyImageToClipboard, () => options.AutoCopyImageToClipboard, value => options.AutoCopyImageToClipboard = value),
                 Check(Strings.TaskSettingsWindow_ShowInsertImageDialog, () => options.ShowInsertImageDialog, value => options.ShowInsertImageDialog = value),
+                Check(Strings.TaskSettingsWindow_AutoExpandCanvas, () => options.AutoExpandCanvas, value => options.AutoExpandCanvas = value),
+                Row(Strings.TaskSettingsWindow_CanvasFillColor, CanvasFillColorPicker(options)),
                 Check(Strings.TaskSettingsWindow_ShowNotifications, () => options.ShowNotifications, value => options.ShowNotifications = value),
                 Button(Strings.TaskSettingsWindow_CustomizeToolbarWithEllipsis, () => _window.ShowImageEditorToolbarEditor(options))));
     }
@@ -1251,10 +1253,10 @@ internal sealed class TaskSettingsPageBuilder
     {
         StackPanel content = new()
         {
-            Margin = new Thickness(28, 24, 28, 32),
             HorizontalAlignment = HorizontalAlignment.Stretch,
             Spacing = 0
         };
+        content.Classes.Add("settings-page");
 
         Grid header = new()
         {
@@ -1581,11 +1583,10 @@ internal sealed class TaskSettingsPageBuilder
         {
             Content = content,
             MinWidth = 250,
-            MinHeight = 32,
-            Padding = new Thickness(8, 4),
             HorizontalAlignment = HorizontalAlignment.Left,
             HorizontalContentAlignment = HorizontalAlignment.Stretch
         };
+        button.Classes.Add("form-control");
 
         void UpdateSelectedTask(HotkeyType task)
         {
@@ -1669,11 +1670,10 @@ internal sealed class TaskSettingsPageBuilder
         {
             Content = content,
             MinWidth = 300,
-            MinHeight = 32,
-            Padding = new Thickness(8, 4),
             HorizontalAlignment = HorizontalAlignment.Stretch,
             HorizontalContentAlignment = HorizontalAlignment.Stretch
         };
+        button.Classes.Add("form-control");
 
         void UpdateSelectedTasks()
         {
@@ -1769,11 +1769,10 @@ internal sealed class TaskSettingsPageBuilder
         {
             Content = content,
             MinWidth = 300,
-            MinHeight = 32,
-            Padding = new Thickness(8, 4),
             HorizontalAlignment = HorizontalAlignment.Stretch,
             HorizontalContentAlignment = HorizontalAlignment.Stretch
         };
+        button.Classes.Add("form-control");
 
         button.Click += (_, _) =>
         {
@@ -1923,6 +1922,25 @@ internal sealed class TaskSettingsPageBuilder
             row.Children.Add(button);
         }
         return row;
+    }
+
+    private static Control CanvasFillColorPicker(ImageEditorOptions options)
+    {
+        var picker = new ShareX.ImageEditor.Presentation.Controls.ColorPickerDropdown
+        {
+            SelectedColorValue = options.CanvasFillColor,
+            HorizontalAlignment = HorizontalAlignment.Left,
+            VerticalAlignment = VerticalAlignment.Center,
+            MinWidth = 130
+        };
+        picker.ColorChanged += (_, brush) =>
+        {
+            if (brush is ISolidColorBrush solid)
+            {
+                options.CanvasFillColor = solid.Color;
+            }
+        };
+        return picker;
     }
 
     private static Button Button(string text, Action action)

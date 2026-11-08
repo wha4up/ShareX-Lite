@@ -157,6 +157,9 @@
   <data name="AfterCaptureWindow_AfterUpload" xml:space="preserve">
     <value>Sau khi tải lên</value>
   </data>
+  <data name="AfterCaptureWindow_AlsoHeading" xml:space="preserve">
+    <value>Thêm</value>
+  </data>
   <data name="AfterCaptureWindow_Cancel" xml:space="preserve">
     <value>Hủy</value>
   </data>
@@ -178,11 +181,56 @@
   <data name="AfterCaptureWindow_FileName" xml:space="preserve">
     <value>Tên tệp</value>
   </data>
+  <data name="AfterCaptureWindow_GoalCopyFile" xml:space="preserve">
+    <value>Sao chép tệp</value>
+  </data>
+  <data name="AfterCaptureWindow_GoalCopyFileDescription" xml:space="preserve">
+    <value>Đưa tệp đã lưu vào bộ nhớ tạm.</value>
+  </data>
+  <data name="AfterCaptureWindow_GoalCopyFilePath" xml:space="preserve">
+    <value>Sao chép đường dẫn tệp</value>
+  </data>
+  <data name="AfterCaptureWindow_GoalCopyFilePathDescription" xml:space="preserve">
+    <value>Sao chép đường dẫn của tệp đã lưu.</value>
+  </data>
+  <data name="AfterCaptureWindow_GoalCopyFolderPath" xml:space="preserve">
+    <value>Sao chép đường dẫn thư mục</value>
+  </data>
+  <data name="AfterCaptureWindow_GoalCopyFolderPathDescription" xml:space="preserve">
+    <value>Sao chép thư mục của tệp đã lưu.</value>
+  </data>
+  <data name="AfterCaptureWindow_GoalCopyImage" xml:space="preserve">
+    <value>Sao chép ảnh</value>
+  </data>
+  <data name="AfterCaptureWindow_GoalCopyImageDescription" xml:space="preserve">
+    <value>Đưa ảnh vào bộ nhớ tạm.</value>
+  </data>
+  <data name="AfterCaptureWindow_GoalCopyUrl" xml:space="preserve">
+    <value>Sao chép URL</value>
+  </data>
+  <data name="AfterCaptureWindow_GoalCopyUrlDescription" xml:space="preserve">
+    <value>Tải lên rồi sao chép liên kết.</value>
+  </data>
+  <data name="AfterCaptureWindow_GoalDescription" xml:space="preserve">
+    <value>Các bước bắt buộc tùy thuộc vào mục tiêu của bạn. Hãy thêm các tùy chọn bổ sung tùy ý.</value>
+  </data>
+  <data name="AfterCaptureWindow_GoalHeading" xml:space="preserve">
+    <value>Bạn muốn đưa gì vào bộ nhớ tạm?</value>
+  </data>
+  <data name="AfterCaptureWindow_GoalLeaveClipboard" xml:space="preserve">
+    <value>Giữ nguyên bộ nhớ tạm</value>
+  </data>
+  <data name="AfterCaptureWindow_GoalLeaveClipboardDescription" xml:space="preserve">
+    <value>Không sao chép và không tải lên gì cả.</value>
+  </data>
   <data name="AfterCaptureWindow_Heading" xml:space="preserve">
     <value>Sau khi chụp</value>
   </data>
   <data name="AfterCaptureWindow_NoPreview" xml:space="preserve">
     <value>Không có bản xem trước ảnh</value>
+  </data>
+  <data name="AfterCaptureWindow_RequiredHeading" xml:space="preserve">
+    <value>Bắt buộc cho mục tiêu này</value>
   </data>
   <data name="AfterCaptureWindow_Subtitle" xml:space="preserve">
     <value>Xem lại nội dung đã chụp và chọn hành động tiếp theo.</value>
@@ -358,6 +406,9 @@
   <data name="ApplicationSettingsWindow_ClipboardFormats" xml:space="preserve">
     <value>Định dạng khay nhớ tạm</value>
   </data>
+  <data name="ApplicationSettingsWindow_CompactMode" xml:space="preserve">
+    <value>Chế độ thu gọn</value>
+  </data>
   <data name="ApplicationSettingsWindow_CustomHotkeysConfigPath" xml:space="preserve">
     <value>Đường dẫn cấu hình phím tắt tùy chỉnh</value>
   </data>
@@ -484,6 +535,9 @@
   <data name="ApplicationSettingsWindow_Icons" xml:space="preserve">
     <value>Biểu tượng</value>
   </data>
+  <data name="ApplicationSettingsWindow_ImagePreviewLabel" xml:space="preserve">
+    <value>Khả năng hiển thị xem trước hình ảnh:</value>
+  </data>
   <data name="ApplicationSettingsWindow_ImagePrintSettings" xml:space="preserve">
     <value>Thiết lập cho in ấn...</value>
   </data>
@@ -516,6 +570,9 @@
   </data>
   <data name="ApplicationSettingsWindow_Light" xml:space="preserve">
     <value>Sáng</value>
+  </data>
+  <data name="ApplicationSettingsWindow_ListView" xml:space="preserve">
+    <value>Chế độ xem danh sách</value>
   </data>
   <data name="ApplicationSettingsWindow_MainWindow" xml:space="preserve">
     <value>Cửa sổ chính</value>
@@ -637,11 +694,17 @@
   <data name="ApplicationSettingsWindow_ShowClipboardContentViewer" xml:space="preserve">
     <value>Hiển thị trình xem nội dung bảng nhớ tạm</value>
   </data>
+  <data name="ApplicationSettingsWindow_ShowColumns" xml:space="preserve">
+    <value>Hiển thị các cột</value>
+  </data>
   <data name="ApplicationSettingsWindow_ShowEditWithShareXButtonInWindowsExplorerContextMenu" xml:space="preserve">
     <value>Hiện nút "Chỉnh sửa trong trình chỉnh sửa hình ảnh ShareX" trong menu ngữ cảnh của Windows Explorer</value>
   </data>
   <data name="ApplicationSettingsWindow_ShowEditWithShareXPhotoEditorButtonInWindowsExplorerContextMenu" xml:space="preserve">
     <value>Hiện nút "Chỉnh sửa trong trình chỉnh sửa ảnh ShareX" trong menu ngữ cảnh của Windows Explorer</value>
+  </data>
+  <data name="ApplicationSettingsWindow_ShowFileDeleteConfirmation" xml:space="preserve">
+    <value>Yêu cầu xác nhận trước khi xóa tệp</value>
   </data>
   <data name="ApplicationSettingsWindow_ShowLargeFileSizeWarning" xml:space="preserve">
     <value>Ngưỡng cảnh báo tệp lớn (MB)</value>
@@ -679,6 +742,39 @@
   <data name="ApplicationSettingsWindow_SimultaneousUploadLimitLabel" xml:space="preserve">
     <value>Giới hạn tải lên đồng thời:</value>
   </data>
+  <data name="ApplicationSettingsWindow_Spacing" xml:space="preserve">
+    <value>Khoảng cách</value>
+  </data>
+  <data name="ApplicationSettingsWindow_SpacingCompact" xml:space="preserve">
+    <value>Thu gọn</value>
+  </data>
+  <data name="ApplicationSettingsWindow_SpacingDefault" xml:space="preserve">
+    <value>Mặc định</value>
+  </data>
+  <data name="ApplicationSettingsWindow_SpacingMenus" xml:space="preserve">
+    <value>Menu</value>
+  </data>
+  <data name="ApplicationSettingsWindow_SpacingMenusLabel" xml:space="preserve">
+    <value>Menu:</value>
+  </data>
+  <data name="ApplicationSettingsWindow_SpacingPreviewLabel" xml:space="preserve">
+    <value>Xem trước:</value>
+  </data>
+  <data name="ApplicationSettingsWindow_SpacingSettingsWindowsLabel" xml:space="preserve">
+    <value>Cửa sổ cài đặt:</value>
+  </data>
+  <data name="ApplicationSettingsWindow_SpacingSidebar" xml:space="preserve">
+    <value>Thanh bên</value>
+  </data>
+  <data name="ApplicationSettingsWindow_SpacingSidebarLabel" xml:space="preserve">
+    <value>Thanh bên:</value>
+  </data>
+  <data name="ApplicationSettingsWindow_SpacingToolMenus" xml:space="preserve">
+    <value>Menu công cụ</value>
+  </data>
+  <data name="ApplicationSettingsWindow_SpacingToolMenusLabel" xml:space="preserve">
+    <value>Menu công cụ:</value>
+  </data>
   <data name="ApplicationSettingsWindow_Steam" xml:space="preserve">
     <value>Steam</value>
   </data>
@@ -687,6 +783,9 @@
   </data>
   <data name="ApplicationSettingsWindow_SubFolderPatternLabel" xml:space="preserve">
     <value>Định dạng tên thư mục phụ:</value>
+  </data>
+  <data name="ApplicationSettingsWindow_TaskViewModeLabel" xml:space="preserve">
+    <value>Chế độ xem tác vụ:</value>
   </data>
   <data name="ApplicationSettingsWindow_Theme" xml:space="preserve">
     <value>Chủ đề</value>
@@ -1228,6 +1327,9 @@
   <data name="FailedToSaveSettings" xml:space="preserve">
     <value>Không lưu được cài đặt</value>
   </data>
+  <data name="FileDeleteConfirmation_DontRemindAgain" xml:space="preserve">
+    <value>Không nhắc lại nữa</value>
+  </data>
   <data name="FileExistWindow_Cancel" xml:space="preserve">
     <value>Hủy</value>
   </data>
@@ -1337,6 +1439,21 @@ Vui lòng chọn phím tắt khác hoặc thoát ứng dụng đang gây lỗi v
   <data name="HotkeySettingsWindow_WindowTitle" xml:space="preserve">
     <value>ShareX - Cài đặt phím tắt</value>
   </data>
+  <data name="IconPackPrompt_ChangeLater" xml:space="preserve">
+    <value>Bạn có thể thay đổi tùy chọn này bất cứ lúc nào trong cài đặt ứng dụng.</value>
+  </data>
+  <data name="IconPackPrompt_LegacyDescription" xml:space="preserve">
+    <value>Các biểu tượng nhiều màu sắc từ ShareX 21.</value>
+  </data>
+  <data name="IconPackPrompt_ModernDescription" xml:space="preserve">
+    <value>Biểu tượng nét mảnh gọn gàng, theo màu chủ đề của bạn.</value>
+  </data>
+  <data name="IconPackPrompt_Subtitle" xml:space="preserve">
+    <value>ShareX có biểu tượng mới. Hãy chọn giao diện bạn thích.</value>
+  </data>
+  <data name="IconPackPrompt_Title" xml:space="preserve">
+    <value>Chọn biểu tượng của bạn</value>
+  </data>
   <data name="ImageData_Write_Error_Message" xml:space="preserve">
     <value>Không thể ghi hình ảnh vào đường dẫn:</value>
   </data>
@@ -1414,6 +1531,9 @@ Vui lòng chọn phím tắt khác hoặc thoát ứng dụng đang gây lỗi v
   </data>
   <data name="MainMenuBuilder_Capture" xml:space="preserve">
     <value>Chụp</value>
+  </data>
+  <data name="MainMenuBuilder_ClassicRuler" xml:space="preserve">
+    <value>Thước kẻ</value>
   </data>
   <data name="MainMenuBuilder_ClipboardViewer" xml:space="preserve">
     <value>Trình xem khay nhớ tạm</value>
@@ -1578,7 +1698,7 @@ Vui lòng chọn phím tắt khác hoặc thoát ứng dụng đang gây lỗi v
     <value>Khởi động lại với quyền quản trị viên</value>
   </data>
   <data name="MainMenuBuilder_Ruler" xml:space="preserve">
-    <value>Thước đo</value>
+    <value>Đo</value>
   </data>
   <data name="MainMenuBuilder_ScreenColorPicker" xml:space="preserve">
     <value>Lấy màu từ màn hình</value>
@@ -1588,6 +1708,9 @@ Vui lòng chọn phím tắt khác hoặc thoát ứng dụng đang gây lỗi v
   </data>
   <data name="MainMenuBuilder_ScreenRecordingGif" xml:space="preserve">
     <value>Ghi màn hình (GIF)...</value>
+  </data>
+  <data name="MainMenuBuilder_ScreenshotDelayJustOnce" xml:space="preserve">
+    <value>Chỉ một lần</value>
   </data>
   <data name="MainMenuBuilder_ScreenshotsFolder" xml:space="preserve">
     <value>Thư mục ảnh chụp màn hình...</value>
@@ -1693,6 +1816,9 @@ Vui lòng chọn phím tắt khác hoặc thoát ứng dụng đang gây lỗi v
   </data>
   <data name="MainWindow_BeautifyImage" xml:space="preserve">
     <value>Làm đẹp ảnh</value>
+  </data>
+  <data name="MainWindow_ClearTaskList" xml:space="preserve">
+    <value>Xóa danh sách</value>
   </data>
   <data name="MainWindow_ClearThumbnailView" xml:space="preserve">
     <value>Xóa chế độ xem hình thu nhỏ</value>
@@ -1855,6 +1981,12 @@ Vui lòng chọn phím tắt khác hoặc thoát ứng dụng đang gây lỗi v
   </data>
   <data name="MainWindow_StopUpload" xml:space="preserve">
     <value>Dừng tải lên</value>
+  </data>
+  <data name="MainWindow_SwitchToListView" xml:space="preserve">
+    <value>Chuyển qua dạng danh sách</value>
+  </data>
+  <data name="MainWindow_SwitchToThumbnailView" xml:space="preserve">
+    <value>Chuyển qua xem trước ảnh</value>
   </data>
   <data name="MainWindow_Text" xml:space="preserve">
     <value>Chữ</value>
@@ -2156,6 +2288,33 @@ Bạn có muốn hủy phiên quay màn hình đang hoạt động không?</valu
   <data name="TaskHelpers_ToggleHotkeys_Hotkeys_enabled_" xml:space="preserve">
     <value>Phím tắt đã bị vô hiệu hóa.</value>
   </data>
+  <data name="TaskListView_Elapsed" xml:space="preserve">
+    <value>Đã trôi qua</value>
+  </data>
+  <data name="TaskListView_Filename" xml:space="preserve">
+    <value>Tên tệp</value>
+  </data>
+  <data name="TaskListView_History" xml:space="preserve">
+    <value>Lịch sử</value>
+  </data>
+  <data name="TaskListView_InQueue" xml:space="preserve">
+    <value>Trong hàng đợi</value>
+  </data>
+  <data name="TaskListView_Progress" xml:space="preserve">
+    <value>Tiến độ</value>
+  </data>
+  <data name="TaskListView_Remaining" xml:space="preserve">
+    <value>Còn lại</value>
+  </data>
+  <data name="TaskListView_Speed" xml:space="preserve">
+    <value>Tốc độ</value>
+  </data>
+  <data name="TaskListView_Status" xml:space="preserve">
+    <value>Trạng thái</value>
+  </data>
+  <data name="TaskListView_URL" xml:space="preserve">
+    <value>URL</value>
+  </data>
   <data name="TaskManager_UploadCompletedURL" xml:space="preserve">
     <value>Tải lên hoàn tất. URL: {0}</value>
   </data>
@@ -2231,6 +2390,9 @@ Bạn có muốn hủy phiên quay màn hình đang hoạt động không?</valu
   <data name="TaskSettingsWindow_AutoCopyImageToClipboard" xml:space="preserve">
     <value>Tự động sao chép hình ảnh vào bảng tạm</value>
   </data>
+  <data name="TaskSettingsWindow_AutoExpandCanvas" xml:space="preserve">
+    <value>Tự động mở rộng vùng vẽ khi văn bản hoặc hình vượt quá mép</value>
+  </data>
   <data name="TaskSettingsWindow_AutoIncrementNumber" xml:space="preserve">
     <value>Số tự động tăng:</value>
   </data>
@@ -2263,6 +2425,9 @@ Bạn có muốn hủy phiên quay màn hình đang hoạt động không?</valu
   </data>
   <data name="TaskSettingsWindow_Cancel" xml:space="preserve">
     <value>Hủy</value>
+  </data>
+  <data name="TaskSettingsWindow_CanvasFillColor" xml:space="preserve">
+    <value>Màu tô cho vùng vẽ được thêm:</value>
   </data>
   <data name="TaskSettingsWindow_Capture" xml:space="preserve">
     <value>Chụp</value>
@@ -2608,6 +2773,9 @@ Bạn có muốn hủy phiên quay màn hình đang hoạt động không?</valu
   </data>
   <data name="TaskSettingsWindow_NativeRecorderEnabled" xml:space="preserve">
     <value>Dùng trình ghi màn hình tích hợp</value>
+  </data>
+  <data name="TaskSettingsWindow_NativeRecorderHDRToneMapping" xml:space="preserve">
+    <value>Ánh xạ tông màu HDR</value>
   </data>
   <data name="TaskSettingsWindow_NativeRecorderHardware" xml:space="preserve">
     <value>Yêu cầu mã hóa video bằng phần cứng</value>

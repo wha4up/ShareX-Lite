@@ -200,6 +200,9 @@ namespace ShareX
                 case HotkeyType.Ruler:
                     OpenRuler(safeTaskSettings);
                     break;
+                case HotkeyType.ClassicRuler:
+                    OpenClassicRuler(safeTaskSettings);
+                    break;
                 case HotkeyType.MouseHighlighter:
                     MouseHighlighterManager.Toggle(safeTaskSettings.ToolsSettingsReference.MouseHighlighterOptions);
                     break;
@@ -696,6 +699,34 @@ namespace ShareX
 
                 completed(result);
             });
+        }
+
+        /// <summary>
+        /// Asks before deleting local files unless the user turned the confirmation off with "Don't remind me again"
+        /// (it can be turned back on in Application settings).
+        /// </summary>
+        public static bool ConfirmFileDelete()
+        {
+            if (!ApplicationState.Settings.ShowFileDeleteConfirmation)
+            {
+                return true;
+            }
+
+            MessageBoxResult result = MessageBox.Show(Strings.MainForm_tsmiDeleteSelectedFile_Click_Do_you_really_want_to_delete_this_file_,
+                "ShareX - " + Strings.MainForm_tsmiDeleteSelectedFile_Click_File_delete_confirmation,
+                MessageBoxButtons.YesNo, Strings.FileDeleteConfirmation_DontRemindAgain, out bool dontRemindAgain);
+
+            if (result != MessageBoxResult.Yes)
+            {
+                return false;
+            }
+
+            if (dontRemindAgain)
+            {
+                ApplicationState.Settings.ShowFileDeleteConfirmation = false;
+            }
+
+            return true;
         }
 
         public static void PrintImage(Image img)
@@ -1877,6 +1908,42 @@ namespace ShareX
             ToolsIntegration.ShowRulerWindow();
         }
 
+        public static void OpenClassicRuler(TaskSettings taskSettings = null)
+        {
+            taskSettings ??= ApplicationState.DefaultTaskSettings;
+            RegionCaptureOptions options = taskSettings.CaptureSettings.RegionCaptureOptions;
+
+            ToolsIntegration.ShowClassicRulerWindow(new ClassicRulerOptions
+            {
+                ShowInfo = options.ShowInfo,
+                UseCustomInfoText = options.UseCustomInfoText,
+                CustomInfoText = options.CustomInfoText,
+                ShowMagnifier = options.ShowMagnifier,
+                UseSquareMagnifier = options.UseSquareMagnifier,
+                MagnifierSize = options.MagnifierSize,
+                MagnifierPixelCount = options.MagnifierPixelCount,
+                BackgroundDimStrength = options.BackgroundDimStrength,
+                DimAllExceptSelection = options.DimAllExceptSelection,
+                ShowCenterCrosshair = options.ShowCenterCrosshair,
+                ShowScreenCrosshair = options.ShowScreenCrosshair,
+                GetWindowRectangles = options.DetectWindows ? ignoredHandle =>
+                {
+                    WindowsRectangleList windows = new WindowsRectangleList
+                    {
+                        IncludeChildWindows = options.DetectControls,
+                        Timeout = 5000
+                    };
+
+                    if (ignoredHandle != IntPtr.Zero)
+                    {
+                        windows.IgnoreHandleList.Add(ignoredHandle);
+                    }
+
+                    return windows.GetWindowInfoList().Select(window => window.Rectangle).ToList();
+                } : null
+            });
+        }
+
         public static void OpenMouseHighlighter(TaskSettings taskSettings = null)
         {
             taskSettings ??= ApplicationState.DefaultTaskSettings;
@@ -2362,7 +2429,8 @@ namespace ShareX
                 // Tools
                 HotkeyType.ColorPicker => AppIcons.Palette,
                 HotkeyType.ScreenColorPicker => AppIcons.ScreenColorPicker,
-                HotkeyType.Ruler => AppIcons.Ruler,
+                HotkeyType.Ruler => AppIcons.Measure,
+                HotkeyType.ClassicRuler => AppIcons.Ruler,
                 HotkeyType.MouseHighlighter => AppIcons.MouseHighlighter,
                 HotkeyType.PinToScreen => AppIcons.Pin,
                 HotkeyType.PinToScreenFromScreen => AppIcons.PictureInPicture,
